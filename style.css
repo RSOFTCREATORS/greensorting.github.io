@@ -66,31 +66,27 @@ body {
 }
 
 .content {
-    position: relative;
     padding: 50px 20px; /* Adjust for spacing */
     text-align: center;
 }
 
-.bubble {
-    background: #ffffff;
-    border-radius: 20px;
-    padding: 30px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
-    max-width: 800px; /* Max width for bubble */
-    position: relative;
-    animation: rise 0.5s ease-in-out forwards; /* Add animation */
+.about-container, .problems-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
 }
 
-@keyframes rise {
-    from {
-        transform: translateY(20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+.about-text, .problems-text {
+    flex: 1;
+    padding: 20px; /* Space between text and image */
+}
+
+.curved-image {
+    border-radius: 20px;
+    width: 100%; /* Responsive image */
+    max-width: 400px; /* Max width for image */
+    margin-left: 20px; /* Space between text and image */
 }
 
 .curve-bg {
@@ -115,6 +111,13 @@ h2 {
     font-size: 2.5em;
     margin: 20px 0;
     color: #00695c;
+}
+
+.get-started {
+    background: #b2dfdb; /* Different background color */
+    padding: 50px 20px;
+    text-align: center;
+    margin-bottom: 50px; /* Space from footer */
 }
 
 .button {
