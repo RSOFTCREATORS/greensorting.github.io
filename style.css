@@ -65,6 +65,34 @@ body {
     background-color: #ffffff; /* White background for separation */
 }
 
+.content {
+    position: relative;
+    padding: 50px 20px; /* Adjust for spacing */
+    text-align: center;
+}
+
+.bubble {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px; /* Max width for bubble */
+    position: relative;
+    animation: rise 0.5s ease-in-out forwards; /* Add animation */
+}
+
+@keyframes rise {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 .curve-bg {
     background: #e0f7fa;
     position: relative;
@@ -81,11 +109,6 @@ body {
     background: #004d40; /* Curve color */
     border-radius: 0 0 100% 100%; /* Creates curve effect */
     z-index: -1; /* Place behind content */
-}
-
-.content {
-    padding: 50px 20px; /* Adjust for spacing */
-    text-align: center;
 }
 
 h2 {
