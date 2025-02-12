@@ -11,15 +11,10 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(0, 77, 64, 0.8);
+    background: transparent; /* Removed background color */
     padding: 1em;
     text-align: center;
     z-index: 1000;
-}
-
-.main-header h1 {
-    margin: 0;
-    color: #ffffff;
 }
 
 .main-header nav {
@@ -28,7 +23,7 @@ body {
 }
 
 .main-header nav a {
-    color: #ffffff;
+    color: #000; /* Change color to black or desired color */
     margin: 0 15px;
     text-decoration: none;
     font-weight: 600;
