@@ -1,48 +1,303 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Green Recycling</title>
+<html>
+  <head>
+    <title>GreenSorting</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="https://rsoftcreators.github.io/greensorting.github.io/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <p>CALL US: 01621842600</p>
-    </div>
-
+  </head>
+  <body>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo">greenrecycling</a>
-            <ul class="nav-links">
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">What bin do I need</a></li>
-                <li><a href="#">What we collect & recycle</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Documents</a></li>
-                <li><a href="#">Locations</a></li>
-            </ul>
-        </div>
+    <nav class="sticky-nav">
+      <div class="nav-container">
+        <a href="index.html" class="logo">GreenSorting</a>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="materials.html">Materials</a></li>
+          <li><a href="get-started.html">Get Started</a></li>
+        </ul>
+      </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Reliable & Convenient Collections</h1>
-            <h2>We Recycle and Reuse 100% of Your Industrial and Commercial Waste</h2>
-            <p>Green Recycling are proud to be making commercially successful and effective environmental solutions in waste management, on a scale large enough to make a real impact. Our waste disposal service covers Essex including Maldon, Witham and Chelmsford.</p>
-            <a href="#" class="cta-button">CONTACT US</a>
-            <a href="#" class="cta-button secondary">Request a call back</a>
+    <header class="hero">
+      <div class="autoplay-images">
+        <img src="images/landscape1.jpg" alt="Landscape 1" class="autoplay-image active">
+        <img src="images/landscape2.jpg" alt="Landscape 2" class="autoplay-image">
+        <img src="images/landscape3.jpg" alt="Landscape 3" class="autoplay-image">
+      </div>
+      <div class="hero-overlay">
+        <h1 class="tagline">Connecting Communities Through Recycling</h1>
+        <div class="cta-buttons">
+          <a href="get-started.html" class="cta-button">Start Recycling</a>
+          <a href="materials.html" class="cta-button">Learn More</a>
         </div>
-    </section>
+      </div>
+    </header>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2023 Green Recycling. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+    <!-- Services Section -->
+    <div id="services-section" class="green-section service">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-7 order-2 order-sm-1 order-md-1 px-sm-auto px-4">
+            <div class="row">
+              <div class="col-6">
+                <div class="card">
+                  <div class="card-body">
+                    <img src="images/service1.jpg" alt="Service 1">
+                  </div>
+                  <div class="service-overview btn-primary btn">
+                    <span>Service 1</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card">
+                  <div class="card-body">
+                    <img src="images/service2.jpg" alt="Service 2">
+                  </div>
+                  <div class="service-overview btn-primary btn">
+                    <span>Service 2</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card">
+                  <div class="card-body">
+                    <img src="images/service3.jpg" alt="Service 3">
+                  </div>
+                  <div class="service-overview btn-primary btn">
+                    <span>Service 3</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card">
+                  <div class="card-body">
+                    <img src="images/service4.jpg" alt="Service 4">
+                  </div>
+                  <div class="service-overview btn-primary btn">
+                    <span>Service 4</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a class="btn btn-primary btn-sm" href="services.html">All Services</a>
+          </div>
+          <div class="col-12 col-md-5 position-relative order-1 order-md-2 order-sm-0">
+            <form class="simple_form form" id="new_message" action="/messages" accept-charset="UTF-8" method="post">
+              <div class="title">
+                <h2>Request a call back</h2>
+              </div>
+              <div class="inputs text-center">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="mb-3 string required message_name text-start">
+                      <input class="form-control string required" required="required" aria-required="true" placeholder="Your Name" type="text" name="message[name]" id="message_name">
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="mb-3 string required message_name text-start">
+                      <input class="form-control string required" required="required" aria-required="true" placeholder="Business name" type="text" name="message[name]" id="message_name">
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-3 email required message_email text-start">
+                  <input class="form-control string email required" required="required" aria-required="true" placeholder="Your Email" type="email" name="message[email]" id="message_email">
+                </div>
+                <div class="mb-3 tel required message_phone text-start">
+                  <input class="form-control string tel required" required="required" aria-required="true" placeholder="Your Contact Number..." type="tel" name="message[phone]" id="message_phone">
+                </div>
+                <div class="mb-3 text required message_message text-start">
+                  <textarea class="form-control text required" required="required" aria-required="true" placeholder="Message" name="message[message]" id="message_message">
+                  </textarea>
+                </div>
+                <input type="submit" name="commit" value="Submit" class="btn btn-primary btn-sm" data-disable-with="Submit">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bins Section -->
+    <div id="bins-section" class="green-section px-sm-0 px-4">
+      <div id="bins-list" class="container">
+        <h2 class="text-center">What Bin do you require?</h2>
+        <p class="text-center">Have a look at our chart and discover what bin is best for you</p>
+        <p id="bin-detail" class="text-center">Click a bin for details</p>
+        <div id="bins">
+          <div class="bins-background"></div>
+          <div id="person">
+            <img src="images/person.jpg" alt="Person">
+          </div>
+          <div class='bin' data-width='98' id='bin-1'>
+            <div class="detail-bin-log border">
+              <div class="bin-log">
+                <div class="detail-bin-title">Bin 1</div>
+                <div class="detail-bin-more d-flex">
+                  <div>
+                    Dimensions:
+                    <span>
+                      <ul>
+                        <li>Height: 302mm</li>
+                        <li>Depth: 866mm</li>
+                        <li>Width: 541mm</li>
+                      </ul>
+                    </span>
+                  </div>
+                  <div>
+                    <span>
+                      <img src="images/bin-equivalent-1.jpg" alt="Bin Equivalent 1">
+                    </span>
+                  </div>
+                </div>
+                <div class="mark"></div>
+              </div>
+            </div>
+            <div class="bin-img">
+              <div class="d-flex flex-column">
+                <div class="d-flex">
+                  <img src="images/bin-1.jpg" alt="Bin 1">
+                  <div class="arrow" id="arrow-1">
+                    <img src="images/Arrow-top.jpg" alt="Arrow Top">
+                    <div>302mm</div>
+                  </div>
+                </div>
+                <div class="bottom-arrow">
+                  <img src="images/Arrow-bottom.jpg" alt="Arrow Bottom">
+                  <div>541mm</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Add more bins here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Video Section -->
+    <div id="video-section" class="green-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 px-sm-0 px-4">
+            <h2>Our Latest Video</h2>
+            <div class="video-wrapper">
+              <iframe width="100%" height="600px" src="https://www.youtube.com/embed/w6skNQA4qes" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="text-end px-sm-0 px-2">
+              <a href="https://www.youtube.com/@GreenSortingLtd" target="_blank" class="visit-yt-channel">
+                Check out our YouTube Channel
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- About Section -->
+    <div id="about-section" class="position-relative green-section px-sm-0 px-4">
+      <div class="container d-position-relative">
+        <div class="row">
+          <div class="col-12 col-md-9 p-0">
+            <div class="card p-lg-5">
+              <div class="card-title">
+                <h2 class="mb-0">About GreenSorting</h2>
+              </div>
+              <div class="card-body">
+                <p>
+                  GreenSorting provides a wide range of tailor made waste management and recycling solutions to businesses & local authorities throughout the South East of England.
+                </p>
+              </div>
+              <div class="card-footer">
+                <a href="about.html" class="btn btn-primary">MORE ABOUT US</a>
+                <a href="contact.html" class="btn btn-primary free-quote outline">CONTACT US</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ellipsis"></div>
+      <img class="truck-bg" src="images/truck.jpg" alt="Truck">
+    </div>
+
+    <!-- Blog Section -->
+    <div id="blog-section" class="green-section px-sm-0 px-4">
+      <div class="text-center section-title">
+        <h2 class="mb-0">
+          Latest Blog Posts
+        </h2>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div class="card blog-item">
+              <div class="card-body">
+                <a href="blog-post-1.html">
+                  <img src="images/blog-post-1.jpg" alt="Blog Post 1">
+                </a>
+                <a class="summary positio-absolute p-4" href="blog-post-1.html">
+                  <h4 class="mb-3 title">Blog Post 1</h4>
+                  <p class="description mb-3">This is a sample blog post.</p>
+                  <div class="d-fllex">
+                    <img class="avatar" src="images/avatar.jpg" alt="Avatar">
+                    <span class="name ms-2">Author</span>
+                    <span class="date ms-2">Date</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="card blog-item">
+              <div class="card-body">
+                <a href="blog-post-2.html">
+                  <img src="images/blog-post-2.jpg" alt="Blog Post 2">
+                </a>
+                <a class="summary positio-absolute p-4" href="blog-post-2.html">
+                  <h4 class="mb-3 title">Blog Post 2</h4>
+                  <p class="description mb-3">This is another sample blog post.</p>
+                  <div class="d-fllex">
+                    <img class="avatar" src="images/avatar.jpg" alt="Avatar">
+                    <span class="name ms-2">Author</span>
+                    <span class="date ms-2">Date</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonial Section -->
+    <div id="testimonial-section" class="position-relative green-section px-sm-0 px-4">
+      <img class="position-absolute curve-top" src="images/curve-top.jpg" alt="Curve Top">
+      <div class="container">
+        <h2 class="text-center">
+          What our clients say about us
+        </h2>
+        <div class="row">
+          <div class="col-12 col-md-4">
+            <div class="card">
+              <div class="card-body d-flex text-center">
+                <div class="stars mx-auto">
+                  <img src="images/star.jpg" alt="Star">
+                  <img src="images/star.jpg" alt="Star">
+                  <img src="images/star.jpg" alt="Star">
+                  <img src="images/star.jpg" alt="Star">
+                  <img src="images/star.jpg" alt="Star">
+                </div>
+                <p class="testimonial">This is a sample testimonial.</p>
+                <p class="name">Client</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="card">
+              <div class="card-body d-flex text-center">
+                <div class="stars mx-auto">
+                  <img src="images/star.jpg" alt="Star">
+                  <img src="images/star.jpg" alt="Star">
+                  <img src="images/star.jpg" alt="Star">
+                  <img src="images/star.jpg" alt="
