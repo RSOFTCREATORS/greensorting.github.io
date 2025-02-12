@@ -68,7 +68,7 @@ body {
 
 .content {
     padding: 50px 20px; /* Adjust for spacing */
-    text-align: center;
+    text-align: left; /* Align text to the left */
 }
 
 .about-container, .problems-container {
@@ -81,6 +81,7 @@ body {
 .about-text, .problems-text {
     flex: 1;
     padding: 20px; /* Space between text and image */
+    text-align: left; /* Align text to the left */
 }
 
 .curved-image {
