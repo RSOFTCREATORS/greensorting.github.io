@@ -6,6 +6,8 @@
     <title>GreenSorting</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css">
 </head>
 <body>
 
@@ -32,20 +34,26 @@
     <h2>Welcome To The GreenSorting Official Website!</h2>
 </div>
 
+<div class="section-divider"></div>
+
 <div class="content" id="about">
     <h2>Why Did We Start GreenSorting?</h2>
     <p>At GreenSorting, we recognized a pressing need in our communities. Conversations with friends and family revealed a common frustration: the overwhelming amount of recyclable materials ending up in landfills. We started GreenSorting to bridge this gap, empowering individuals to recycle effectively while earning rewards. Our mission is to create a sustainable future where everyone can contribute to environmental conservation.</p>
 </div>
 
-<div class="content" id="problems">
-    <h2>Our Problems to Solve</h2>
-    <p>Every year, millions of tons of recyclable materials are discarded, contributing to pollution and resource depletion. Our goal at GreenSorting is to tackle this issue head-on. We aim to provide an easy platform for individuals to recycle their materials responsibly while fostering community engagement and awareness about the importance of recycling. Together, we can turn waste into opportunity!</p>
+<div class="curve-bg">
+    <div class="content" id="problems">
+        <h2>Our Problems to Solve</h2>
+        <p>Every year, millions of tons of recyclable materials are discarded, contributing to pollution and resource depletion. Our goal at GreenSorting is to tackle this issue head-on. We aim to provide an easy platform for individuals to recycle their materials responsibly while fostering community engagement and awareness about the importance of recycling. Together, we can turn waste into opportunity!</p>
+    </div>
 </div>
 
-<div class="content" id="getstarted">
-    <h2>Get Started</h2>
-    <p>Join us in making a difference! Contact us today to learn more about our services.</p>
-    <a href="mailto:greensorting@gmail.com" class="button">Contact Us Via Email: greensorting@gmail.com</a>
+<div class="curve-bg">
+    <div class="content" id="getstarted">
+        <h2>Get Started</h2>
+        <p>Join us in making a difference! Contact us today to learn more about our services.</p>
+        <a href="mailto:greensorting@gmail.com" class="button">Contact Us Via Email: greensorting@gmail.com</a>
+    </div>
 </div>
 
 <footer>
@@ -65,6 +73,9 @@
 
     setInterval(showSlides, 3000); // Change slide every 3 seconds
     showSlides(); // Show the first slide initially
+
+    // Initialize AOS
+    AOS.init();
 </script>
 
 </body>

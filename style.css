@@ -57,29 +57,35 @@ body {
 .welcome-message h2 {
     font-size: 3em;
     margin: 0;
+    color: white; /* Changed to white */
+}
+
+.section-divider {
+    height: 100px; /* Adjust height for a smooth transition */
+    background-color: #ffffff; /* White background for separation */
+}
+
+.curve-bg {
+    background: #e0f7fa;
+    position: relative;
+    padding: 50px 20px;
+}
+
+.curve-bg::before {
+    content: '';
+    position: absolute;
+    top: -50px; /* Adjust for curve size */
+    left: 0;
+    width: 100%;
+    height: 100px; /* Curve height */
+    background: #004d40; /* Curve color */
+    border-radius: 0 0 100% 100%; /* Creates curve effect */
+    z-index: -1; /* Place behind content */
 }
 
 .content {
-    padding: 100px 20px; /* Adjust for fixed header */
+    padding: 50px 20px; /* Adjust for spacing */
     text-align: center;
-}
-
-.about-container, .materials-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 20px 0;
-}
-
-.about-text, .materials-text {
-    flex: 1;
-    margin-right: 20px;
-}
-
-.futuristic-image {
-    border-radius: 20px;
-    width: 100%;
-    max-width: 400px; /* Adjust image size */
 }
 
 h2 {
@@ -97,6 +103,11 @@ h2 {
     cursor: pointer;
     font-size: 1em;
     text-decoration: none;
+    transition: background 0.3s; /* Smooth transition for button */
+}
+
+.button:hover {
+    background: #004d40; /* Change color on hover */
 }
 
 footer {
@@ -104,4 +115,19 @@ footer {
     padding: 20px;
     background: #004d40;
     color: #ffffff;
+}
+
+/* Add animations using AOS */
+[data-aos] {
+    opacity: 0;
+    transition-property: opacity, transform;
+}
+[data-aos].aos-animate {
+    opacity: 1;
+}
+[data-aos="fade-up"] {
+    transform: translateY(20px);
+}
+[data-aos="fade-up"].aos-animate {
+    transform: translateY(0);
 }
