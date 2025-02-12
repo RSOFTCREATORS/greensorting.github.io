@@ -57,6 +57,7 @@ body {
     background-color: rgba(0, 77, 64, 0.6);
     padding: 20px;
     border-radius: 10px;
+    width: 80%; /* Set width to allow for more space */
 }
 
 .welcome-message h2 {
