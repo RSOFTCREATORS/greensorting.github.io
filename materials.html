@@ -1,22 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Same head as index.html -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Materials We Collect</title>
+    <link rel="stylesheet" href="https://rsoftcreators.github.io/greensorting.github.io/style.css">
 </head>
 <body>
-    <!-- Same navigation -->
+    <nav class="sticky-nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Greensorting</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="materials.html" class="active">Materials</a></li>
+                <li><a href="get-started.html">Get Started</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <main class="materials-grid">
+        <h2>Materials We Collect</h2>
         <div class="material-card" draggable="true">
-            <img src="plastic-icon.svg" alt="Plastic">
+            <img src="images/plastic-icon.svg" alt="Plastic">
             <h3>Plastic</h3>
-            <div class="material-info">
-                <p>We accept PET, HDPE, and LDPE plastics</p>
-            </div>
+            <p>We accept PET, HDPE, and LDPE plastics.</p>
         </div>
-        
-        <!-- More material cards -->
+        <div class="material-card" draggable="true">
+            <img src="images/glass-icon.svg" alt="Glass">
+            <h3>Glass</h3>
+            <p>We accept all types of glass containers.</p>
+        </div>
+        <div class="material-card" draggable="true">
+            <img src="images/metal-icon.svg" alt="Metal">
+            <h3>Metal</h3>
+            <p>We accept aluminum and steel cans.</p>
+        </div>
 
         <div class="sorting-zones">
             <div class="sort-zone" id="plastic-zone">Plastic</div>
@@ -25,7 +44,20 @@
         </div>
     </main>
 
-    <!-- Same footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Subscribe to our newsletter" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </footer>
+
     <script src="https://rsoftcreators.github.io/greensorting.github.io/script.js"></script>
 </body>
 </html>

@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Same head -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get Started</title>
+    <link rel="stylesheet" href="https://rsoftcreators.github.io/greensorting.github.io/style.css">
 </head>
 <body>
-    <!-- Navigation -->
+    <nav class="sticky-nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Greensorting</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="materials.html">Materials</a></li>
+                <li><a href="get-started.html" class="active">Get Started</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <section class="signup-section">
+        <h2>Join Us Today!</h2>
         <form class="animated-form">
             <div class="form-group">
                 <input type="text" id="name" required>
@@ -22,13 +35,32 @@
     </section>
 
     <section class="testimonials">
+        <h2>What Our Users Say</h2>
         <div class="testimonial hidden">
             <p>"Greensorting changed how I recycle!"</p>
         </div>
-        <!-- More testimonials -->
+        <div class="testimonial hidden">
+            <p>"I love how easy it is to recycle with Greensorting!"</p>
+        </div>
+        <div class="testimonial hidden">
+            <p>"A fantastic initiative for our community!"</p>
+        </div>
     </section>
 
-    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Subscribe to our newsletter" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </footer>
+
     <script src="https://rsoftcreators.github.io/greensorting.github.io/script.js"></script>
 </body>
 </html>
