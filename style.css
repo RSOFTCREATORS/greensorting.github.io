@@ -103,6 +103,7 @@ body {
     width: 100%; /* Full width */
     padding: 100px 20px; /* Increase padding for height */
     text-align: center;
+    position: relative; /* For arrow positioning */
 }
 
 .get-started h2 {
@@ -111,6 +112,26 @@ body {
 
 .get-started p {
     font-size: 1.2em; /* Smaller size for Get Started text */
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+}
+
+.arrow.left {
+    left: 10px; /* Position left arrow */
+    border-bottom: 30px solid red; /* Red arrow */
+}
+
+.arrow.right {
+    right: 10px; /* Position right arrow */
+    border-top: 30px solid red; /* Red arrow */
 }
 
 .button {
@@ -134,7 +155,7 @@ footer {
     padding: 20px;
     background: #004d40;
     color: #ffffff;
-    font-size: 2em; /* Increased size for footer text */
+    font-size: 1em; /* Reduced size for footer text */
 }
 
 /* Add animations using AOS */
