@@ -29,6 +29,19 @@ body {
     font-weight: 600;
 }
 
+.slideshow {
+    position: relative;
+    overflow: hidden;
+    height: 300px; /* Height for the slideshow */
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    display: none;
+    object-fit: cover; /* Ensures the image covers the area */
+}
+
 .content {
     padding: 100px 20px; /* Adjust for fixed header */
     text-align: center;
