@@ -1,303 +1,1073 @@
+
 <!DOCTYPE html>
 <html>
   <head>
-    <title>GreenSorting</title>
+    <title>Green Recycling</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="https://rsoftcreators.github.io/greensorting.github.io/style.css">
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="87D5DvcwX1GzaFvW-pficZYZ8KgkvNEY0sxM7VcULZ4XAwYDx80YppC56m_l3eBBkTVAs2VuQmpScoNBDwigWA" />
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="/manifest.json" rel="manifest">
+    <link rel="stylesheet" href="/assets/application-c0d9c65fed941c32ffb945de535f9dc9514594123d5bfada471709ccf0dba2de.css" data-turbo-track="reload" />
+    <script type="importmap" data-turbo-track="reload">{
+  "imports": {
+    "application": "/assets/application-dfc621d569be80223117570329f00f2401814dd6f19c4fe6f06a0740f451e198.js",
+    "@hotwired/turbo-rails": "/assets/turbo.min-8838df7d6093cc5b0a2cb823a6f02c0d3a6fc745808a316573b5a92f8cb3872e.js",
+    "@hotwired/stimulus": "/assets/stimulus.min-d03cf1dff41d6c5698ec2c5d6a501615a7a33754dbeef8d1edd31c928d17c652.js",
+    "@hotwired/stimulus-loading": "/assets/stimulus-loading-1fc59770fb1654500044afd3f5f6d7d00800e5be36746d55b94a2963a7a228aa.js",
+    "bootstrap": "https://ga.jspm.io/npm:bootstrap@5.3.0/dist/js/bootstrap.esm.js",
+    "@popperjs/core": "https://ga.jspm.io/npm:@popperjs/core@2.11.8/lib/index.js",
+    "jquery": "https://ga.jspm.io/npm:jquery@3.7.0/dist/jquery.js",
+    "jquery-validation": "https://ga.jspm.io/npm:jquery-validation@1.19.5/dist/jquery.validate.js",
+    "controllers/application": "/assets/controllers/application-368d98631bccbf2349e0d4f8269afb3fe9625118341966de054759d96ea86c7e.js",
+    "controllers/hello_controller": "/assets/controllers/hello_controller-549135e8e7c683a538c3d6d517339ba470fcfb79d62f738a0a089ba41851a554.js",
+    "controllers": "/assets/controllers/index-2db729dddcc5b979110e98de4b6720f83f91a123172e87281d5a58410fc43806.js"
+  }
+}</script>
+<link rel="modulepreload" href="/assets/application-dfc621d569be80223117570329f00f2401814dd6f19c4fe6f06a0740f451e198.js">
+<link rel="modulepreload" href="/assets/turbo.min-8838df7d6093cc5b0a2cb823a6f02c0d3a6fc745808a316573b5a92f8cb3872e.js">
+<link rel="modulepreload" href="/assets/stimulus.min-d03cf1dff41d6c5698ec2c5d6a501615a7a33754dbeef8d1edd31c928d17c652.js">
+<link rel="modulepreload" href="/assets/stimulus-loading-1fc59770fb1654500044afd3f5f6d7d00800e5be36746d55b94a2963a7a228aa.js">
+<script src="/assets/es-module-shims.min-4ca9b3dd5e434131e3bb4b0c1d7dff3bfd4035672a5086deec6f73979a49be73.js" async="async" data-turbo-track="reload"></script>
+<script type="module">import "application"</script>
+    <script type="text/javascript" src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js"></script>
+    <meta name="turbo-refresh-scroll" content="preserve">
+
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-F7WCKHXWPP"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-F7WCKHXWPP');
+      </script>
   </head>
-  <body>
-    <!-- Navigation -->
-    <nav class="sticky-nav">
-      <div class="nav-container">
-        <a href="index.html" class="logo">GreenSorting</a>
-        <ul class="nav-links">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="materials.html">Materials</a></li>
-          <li><a href="get-started.html">Get Started</a></li>
-        </ul>
-      </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <header class="hero">
-      <div class="autoplay-images">
-        <img src="images/landscape1.jpg" alt="Landscape 1" class="autoplay-image active">
-        <img src="images/landscape2.jpg" alt="Landscape 2" class="autoplay-image">
-        <img src="images/landscape3.jpg" alt="Landscape 3" class="autoplay-image">
+  <body id="pages-home">
+    <div class="container">
+  <div class="row">
+    <div class="call-us">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 23 23" fill="none">
+        <g clip-path="url(#clip0_1595_2186)">
+          <path
+            d="M6.1548 9.18508C6.90595 10.5468 7.77168 11.8537 8.89567 13.0455C10.0233 14.2445 11.4256 15.3357 13.2407 16.2679C13.3753 16.3337 13.5026 16.3337 13.6172 16.288C13.79 16.2222 13.9664 16.0778 14.1392 15.9042C14.2738 15.7689 14.4411 15.5533 14.6157 15.3175C15.3141 14.3944 16.178 13.2484 17.3984 13.8223C17.4257 13.8351 17.4457 13.8497 17.473 13.8607L21.5433 16.2131C21.5561 16.2204 21.5706 16.2332 21.5815 16.2405C22.1181 16.6116 22.34 17.1837 22.3454 17.8326C22.3454 18.4924 22.1035 19.2345 21.7489 19.8615C21.2796 20.6895 20.5885 21.2378 19.7919 21.5997C19.0334 21.9507 18.1895 22.1389 17.3784 22.2596C16.1052 22.4478 14.9121 22.3272 13.6917 21.9507C12.4986 21.5796 11.2964 20.9673 9.98329 20.1521L9.8869 20.0899C9.28489 19.7116 8.63377 19.3076 7.99539 18.8306C5.6601 17.0576 3.27934 14.4968 1.72794 11.6782C0.427523 9.31303 -0.281794 6.75954 0.105602 4.32669C0.320216 2.99238 0.889488 1.77869 1.88253 0.978102C2.74826 0.276213 3.91409 -0.107632 5.42366 0.0276276C5.59644 0.0404224 5.75104 0.140953 5.83288 0.290836L8.4428 4.72516C8.82474 5.22233 8.87203 5.71585 8.66287 6.20936C8.49009 6.61332 8.14089 6.98619 7.66437 7.33348C7.52433 7.45412 7.357 7.57659 7.18058 7.70453C6.59676 8.13042 5.93291 8.62211 6.16026 9.1997L6.1548 9.18508Z"
+            fill="#009967" />
+        </g>
+        <defs>
+          <clipPath id="clip0_1595_2186">
+            <rect width="22.3489" height="22.3489" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
+      <div class="phone">CALL US:
+        <a href="tel:01621 842600">01621 842600</a>
       </div>
-      <div class="hero-overlay">
-        <h1 class="tagline">Connecting Communities Through Recycling</h1>
-        <div class="cta-buttons">
-          <a href="get-started.html" class="cta-button">Start Recycling</a>
-          <a href="materials.html" class="cta-button">Learn More</a>
+    </div>
+    <div class="col-12">
+      <nav class="navbar navbar-expand-xxl">
+        <a class="navbar-brand" href="/">
+          <img src="/assets/logo-f3130a43b197f67fd5c198ce5f36b1cf7903fadd3aa1c12246f9c86c3563521d.png" />
+        </a>
+        <button class="navbar-toggler btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" style="font-size: 12px;"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/bins">What bin do I need</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="/about" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                What we collect & recycle
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/waste-recycle">Overview</a></li>
+                <li><hr class="dropdown-divider"></li>
+
+                <li><a class="dropdown-item" href="/paper-recycling">Paper Recycling</a></li>
+                <li><hr class="dropdown-divider"></li>
+
+                <li><a class="dropdown-item" href="/cardboard-recycling">Cardboard Recycling</a></li>
+                <li><hr class="dropdown-divider"></li>
+
+                <li><a class="dropdown-item" href="/glass-recycling">Glass Recycling</a></li>
+                <li><hr class="dropdown-divider"></li>
+
+                <li><a class="dropdown-item" href="/metal-recycling">Metal Recycling</a></li>
+                <li><hr class="dropdown-divider"></li>
+
+                <li><a class="dropdown-item" href="/wood-recycling">Wood Recycling</a></li>
+                <li><hr class="dropdown-divider"></li>
+
+                <li><a class="dropdown-item" href="/industrial-waste">Industrial Waste</a></li>
+                <li><hr class="dropdown-divider"></li>
+
+                <li><a class="dropdown-item" href="/electrical-waste">Electrical Waste</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="/about" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                About
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/about">History</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/faq">FAQ</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/video">Video</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/contact">Contact</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/news">News</a></li>
+              </ul>
+            </li>
+    
+
+            <li class="nav-item">
+              <a class="nav-link" href="/documents">Documents</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/locations">Locations</a>
+            </li>
+          </ul>
         </div>
-      </div>
-    </header>
+      </nav>
+    </div>
+  </div>
+</div>
 
-    <!-- Services Section -->
-    <div id="services-section" class="green-section service">
-      <div class="container">
+    <div class="qoute text-center">
+  Reliable <span class="text-primary">&</span>Convenient <span class="text-primary"> Collections</span>
+</div>
+<div id="hero-section" class="green-section negative-m">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="d-inline-block d-sm-none d-small">
+          <div>
+            We <span class="text-primary">Recycle</span> and <span class="text-primary">Reuse</span> 
+          </div>
+          <div>
+            100% of Your 
+          </div>
+          <div>
+            <span class="text-primary">Industrial</span> and
+          </div>
+          <div>
+            <span class="text-primary">Commercial</span>
+          </div>
+          <div>
+            Waste
+          </div>
+        </h1>
+
+        <h1 class="d-none d-sm-block d-large">
+          <span class="text-sm">
+            <span class="text-primary">Reliable</span> & <span class="text-primary">Convenient</span> Collections
+          </span>
+
+          <br>
+          <span>
+            We <span class="text-primary">Recycle</span> and <span class="text-primar">Reuse</span> 100%
+            <br>
+            of Your <span class="text-primary">Industrial</span> and
+            <br>
+            <span class="text-primary">Commercial</span> Waste
+          </span>
+        </h1>
+
+        <p class="d-none d-lg-block">Green Recycling are proud to be making commercially successful and effective
+          environmental solutions in waste management, on a scale large enough to make a real impact. Our waste disposal
+          service covers Essex including Maldon, Witham and Chelmsford.</p>
+
+        <div class="cta d-flex d-none d-sm-block">
+  <a href="/contact">
+    <span class="btn btn-primary">CONTACT US</span>
+  </a>
+</div>
+
+<div class="cta d-flex justify-content-end d-inline-block d-sm-none">
+  <a href="/contact">
+    <span class="btn btn-primary">CONTACT US</span>
+  </a>
+</div>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="hero-carousel" class="hero-img">
+    <div class="item" data-id="1">
+      <img src="/assets/hero/01-a4ba3b0615c5a8632f208b0f0193e1a8eee15ca05c9f98223e68d2d4da198d49.png" />
+    </div>
+    <div class="item" data-id="2">
+      <img src="/assets/hero/02-938e9a9f9ea84873e07d3fb7664ade283d10917e70ad5e245530ae0c632b0338.png" />
+    </div>
+    <div class="item" data-id="3">
+      <img src="/assets/hero/03-3fef596093dff07b366b08cd8da5bf82bd52943840a603df18a0f133d513184b.png" />
+    </div>
+    <div class="item" data-id="4">
+      <img src="/assets/hero/04-771cbb628d336b74d9d1ad6c89f679426f3a2796689cdcc7e8d8d317ffacebf7.png" />
+    </div>
+    <div class="item" data-id="5">
+      <img src="/assets/hero/05-c65a00b03ef40be8718d9f391ba26b513940a391366d826174b4f698b8482b48.png" />
+    </div>
+    <div class="item" data-id="6">
+      <img src="/assets/hero/06-d76135e51567af397c2ac80c552e58a072ca9d69ed1592e93efde211582c5d46.png" />
+    </div>
+    <div class="item" data-id="7">
+      <img src="/assets/hero/07-e974daab06a4eff2bf3780384ba5908ba570c671209a653b0c89d5b722333700.png" />
+    </div>
+    <div class="item" data-id="8">
+      <img src="/assets/hero/08-6de76cbdcf0b7ff4f31856fbe343d001dfe433d886433bb8a35ccfb9b5b5ddc9.png" />
+    </div>
+    <div class="item" data-id="9">
+      <img src="/assets/hero/09-fc7173c8eb9138d1d739b7e689419f8f0d8b7eb1b987f09040f63acfd8af7385.png" />
+    </div>
+    <div class="item" data-id="10">
+      <img src="/assets/hero/10-b2c016fd4dd2b790613de1370ac337e6a4a18bdb78a3f18de52ccd5bc5cf41da.png" />
+    </div>
+    <div class="item" data-id="11">
+      <img src="/assets/hero/11-b944f83cce5e449f82ece85733a7e37c258c9503b836964e777952b817e78dff.png" />
+    </div>
+    <div class="item" data-id="12">
+      <img src="/assets/hero/12-7a5f7145b15bd9dabb890d7a52d59f8b78d5a84778b612c25e39ea6bd238ec23.png" />
+    </div>
+  </div>
+
+  <img class="bottom-bg" src="/assets/hero-bottom-wave-098c510c134eff0189da8a4cf30ed4f0e452851fa41a91c23badf9c5011a3d0a.png" />
+
+  <div class="hero-home-bottom-mobile">
+    <img src="/assets/group-3638-3250ec444ebd9a36a4f4a70676258fd32840984583fda803b0fc3a48e7c52db9.png" />
+  </div>
+</div>
+
+<div id="services-section" class="green-section service">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-7 order-2 order-sm-1 order-md-1 px-sm-auto px-4">
         <div class="row">
-          <div class="col-12 col-md-7 order-2 order-sm-1 order-md-1 px-sm-auto px-4">
+          <div class="col-6">
+            <div class="card">
+              <div class="card-body">
+                <img src="/assets/services/01-5733b656e84d836b4073d6b4266801e266b076fa50e9dcc94fc3a18bdbccf19e.png" />
+              </div>
+
+              <div class="service-overview btn-primary btn">
+                <span>skip & BIN hire AND <br>COLLECTION</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="card">
+              <div class="card-body">
+                <img src="/assets/services/02-982f4207fc02dc6e320986ea3ec53fa8bad9db1372d4d8977bc69a8759cebac4.png" />
+              </div>
+
+              <div class="service-overview btn-primary btn">
+                <span>industrial AND <br>commercial waste</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="card">
+              <div class="card-body">
+                <img src="/assets/services/03-60280ed5a5e99a25e32fc1093f8749cf77eaa1c0f08a3bed4da4688d13c06193.png" />
+              </div>
+
+              <div class="service-overview btn-primary btn">
+                <span>confidential waste <br>collection</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="card">
+              <div class="card-body">
+                <img src="/assets/services/04-1706651fc9a69e6aa8666cdae178f0f0b5302e70913511622b467ecba1def8af.png" />
+              </div>
+
+              <div class="service-overview btn-primary btn">
+                <span>RECYCLING COLLECTION <br>AND PROCESSING</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a class="btn btn-primary btn-sm" href="/services">ALL SERVICES</a>
+      </div>
+
+      <div class="col-12 col-md-5 position-relative order-1 order-md-2 order-sm-0">
+        <form class="simple_form form" id="new_message" action="/messages" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="0civwA6ZoVkLKXoDYXZAp6Gcsq6IJlofu9semuQfqeolw3e1yf_1swU0CLa2UevC0PaTMd41ItYAcy0jncMmzA" autocomplete="off" />
+          <div class="title">
+            <h2>Request a call back</h2>
+          </div>
+
+          <div class="inputs text-center">
             <div class="row">
               <div class="col-6">
-                <div class="card">
-                  <div class="card-body">
-                    <img src="images/service1.jpg" alt="Service 1">
-                  </div>
-                  <div class="service-overview btn-primary btn">
-                    <span>Service 1</span>
-                  </div>
-                </div>
+                <div class="mb-3 string required message_name text-start"><input class="form-control string required" required="required" aria-required="true" placeholder="Your Name" type="text" name="message[name]" id="message_name" /></div>
               </div>
               <div class="col-6">
-                <div class="card">
-                  <div class="card-body">
-                    <img src="images/service2.jpg" alt="Service 2">
-                  </div>
-                  <div class="service-overview btn-primary btn">
-                    <span>Service 2</span>
-                  </div>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="card">
-                  <div class="card-body">
-                    <img src="images/service3.jpg" alt="Service 3">
-                  </div>
-                  <div class="service-overview btn-primary btn">
-                    <span>Service 3</span>
-                  </div>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="card">
-                  <div class="card-body">
-                    <img src="images/service4.jpg" alt="Service 4">
-                  </div>
-                  <div class="service-overview btn-primary btn">
-                    <span>Service 4</span>
-                  </div>
-                </div>
+                <div class="mb-3 string required message_name text-start"><input class="form-control string required" required="required" aria-required="true" placeholder="Business name" type="text" name="message[name]" id="message_name" /></div>
               </div>
             </div>
-            <a class="btn btn-primary btn-sm" href="services.html">All Services</a>
+            <div class="mb-3 email required message_email text-start"><input class="form-control string email required" required="required" aria-required="true" placeholder="Your Email" type="email" name="message[email]" id="message_email" /></div>
+            <div class="mb-3 tel required message_phone text-start"><input class="form-control string tel required" required="required" aria-required="true" placeholder="Your Contact Number..." type="tel" name="message[phone]" id="message_phone" /></div>
+            <div class="mb-3 text required message_message text-start"><textarea class="form-control text required" required="required" aria-required="true" placeholder="Message" name="message[message]" id="message_message">
+</textarea></div>
+            <input type="submit" name="commit" value="Submit" class="btn btn-primary btn-sm" data-disable-with="Submit" />
           </div>
-          <div class="col-12 col-md-5 position-relative order-1 order-md-2 order-sm-0">
-            <form class="simple_form form" id="new_message" action="/messages" accept-charset="UTF-8" method="post">
-              <div class="title">
-                <h2>Request a call back</h2>
-              </div>
-              <div class="inputs text-center">
-                <div class="row">
-                  <div class="col-6">
-                    <div class="mb-3 string required message_name text-start">
-                      <input class="form-control string required" required="required" aria-required="true" placeholder="Your Name" type="text" name="message[name]" id="message_name">
-                    </div>
-                  </div>
-                  <div class="col-6">
-                    <div class="mb-3 string required message_name text-start">
-                      <input class="form-control string required" required="required" aria-required="true" placeholder="Business name" type="text" name="message[name]" id="message_name">
-                    </div>
-                  </div>
-                </div>
-                <div class="mb-3 email required message_email text-start">
-                  <input class="form-control string email required" required="required" aria-required="true" placeholder="Your Email" type="email" name="message[email]" id="message_email">
-                </div>
-                <div class="mb-3 tel required message_phone text-start">
-                  <input class="form-control string tel required" required="required" aria-required="true" placeholder="Your Contact Number..." type="tel" name="message[phone]" id="message_phone">
-                </div>
-                <div class="mb-3 text required message_message text-start">
-                  <textarea class="form-control text required" required="required" aria-required="true" placeholder="Message" name="message[message]" id="message_message">
-                  </textarea>
-                </div>
-                <input type="submit" name="commit" value="Submit" class="btn btn-primary btn-sm" data-disable-with="Submit">
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <!-- Bins Section -->
-    <div id="bins-section" class="green-section px-sm-0 px-4">
-      <div id="bins-list" class="container">
-        <h2 class="text-center">What Bin do you require?</h2>
-        <p class="text-center">Have a look at our chart and discover what bin is best for you</p>
-        <p id="bin-detail" class="text-center">Click a bin for details</p>
-        <div id="bins">
-          <div class="bins-background"></div>
-          <div id="person">
-            <img src="images/person.jpg" alt="Person">
+          <script src="https://www.recaptcha.net/recaptcha/api.js?onload=executeRecaptchaForContact&render=6LdmI3IpAAAAAKWjIbOnJeG8A90Zbfrhc2sXelcU"   ></script>
+        <script>
+          function executeRecaptchaForContact() {
+            grecaptcha.ready(function() {
+              grecaptcha.execute('6LdmI3IpAAAAAKWjIbOnJeG8A90Zbfrhc2sXelcU', {action: 'contact'}).then(function(token) {
+                setInputWithRecaptchaResponseTokenForContact('g-recaptcha-response-data-contact', token)
+              });
+            });
+          };
+                  var setInputWithRecaptchaResponseTokenForContact = function(id, token) {
+          var element = document.getElementById(id);
+          if (element !== null) element.value = token;
+        }
+
+        </script>
+<input type="hidden" name="g-recaptcha-response-data[contact]" id="g-recaptcha-response-data-contact" data-sitekey="6LdmI3IpAAAAAKWjIbOnJeG8A90Zbfrhc2sXelcU" class="g-recaptcha g-recaptcha-response "/>
+
+
+          <div class="footer message-holder">
+              <p class="mb-0">Request a call back and we will get <br>back to you within 12 hours.</p>
           </div>
-          <div class='bin' data-width='98' id='bin-1'>
-            <div class="detail-bin-log border">
-              <div class="bin-log">
-                <div class="detail-bin-title">Bin 1</div>
-                <div class="detail-bin-more d-flex">
-                  <div>
-                    Dimensions:
-                    <span>
-                      <ul>
-                        <li>Height: 302mm</li>
-                        <li>Depth: 866mm</li>
-                        <li>Width: 541mm</li>
-                      </ul>
-                    </span>
-                  </div>
-                  <div>
-                    <span>
-                      <img src="images/bin-equivalent-1.jpg" alt="Bin Equivalent 1">
-                    </span>
-                  </div>
+</form>      </div>
+    </div>
+  </div>
+
+  <img class="ellipsis-bg d-none d-md-block" src="/assets/services/ellipsis-bg-c0826306f50f03ab2de808f8cbcf0b54bc90c38949dce555e048c865bb9a37cd.png" />
+</div>
+
+<div id="bins-section" class="green-section px-sm-0 px-4">
+  <div id="bins-list" class="container">
+    <h2 class="text-center">What <span class="text-primary">Bin</span> do you require?</h2>
+    <p class="text-center">Have a look at our chart and discover what bin is best for you</p>
+    <p id="bin-detail" class="text-center">Click a bin for details</p>
+    <div id="bins">
+      <div class="bins-background"></div>
+      <div id="person">
+        <img src="/assets/bins/person-e2251fc79577471fc8ebb4ff82abb90fd1043c8fbe8d7aa8d1f4cd1f5ff8e407.svg" />
+      </div>
+      <div id="side">
+        <div class='bin position-relative' id='bin-1'>
+          <div class="detail-bin-log border">
+            <div class="bin-log">
+              <div class="detail-bin-title">Office Bin</div>
+              <div class="detail-bin-more d-flex">
+                <div>
+                  Dimensions:
+                  <span>
+                    <ul>
+                      <li>Height: 302mm</li>
+                      <li>Depth: 866mm</li>
+                      <li>Width: 541mm</li>
+                    </ul>
+                  </span>
                 </div>
-                <div class="mark"></div>
+                <div>
+                  <span>
+                    <img src="/assets/bins/bin-equivalent-1-88d918b58fca837ed0cbeea1b114d1ea20b953177c99a5057b57848cce80481c.png" />
+                  </span>
+                </div>
               </div>
+              <div class="mark"></div>
             </div>
-            <div class="bin-img">
-              <div class="d-flex flex-column">
-                <div class="d-flex">
-                  <img src="images/bin-1.jpg" alt="Bin 1">
-                  <div class="arrow" id="arrow-1">
-                    <img src="images/Arrow-top.jpg" alt="Arrow Top">
-                    <div>302mm</div>
+          </div>
+          <div class="bin-img">
+            <div class="d-flex flex-column">
+              <div class="d-flex">
+                <img src="/assets/bins/bin-1-b45303333dc408d1240273c30b6e7e4e19d08f9885d58d60722a98af0989b6bb.png" />
+                  <div class="arrow">
+                    <img src="/assets/bins/Arrow-top-7725bfa48499d2606c8baaee3c58301bdc69817181face35562cc2e37e223e9e.svg" />
+                      <div>302mm</div>
                   </div>
-                </div>
-                <div class="bottom-arrow">
-                  <img src="images/Arrow-bottom.jpg" alt="Arrow Bottom">
+              </div>
+              <div class="bottom-arrow">
+                <img src="/assets/bins/Arrow-bottom-994b35f41ffa2e2dfcf0539afe6d3fafc3e1d1bd5060ba57b203907132c3ba80.svg" />
                   <div>541mm</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='bin' id='bin-2'>
+          <div class="detail-bin-log border">
+            <div class="bin-log">
+              <div class="detail-bin-title">240L Wheelie Bin</div>
+              <div class="detail-bin-more d-flex">
+                <div>
+                  Dimensions:
+                  <span>
+                    <ul>
+                      <li>Height: 583mm</li>
+                      <li>Depth: 1079mm</li>
+                      <li>Width: 737mm</li>
+                    </ul>
+                  </span>
+                </div>
+                <div>
+                  <span>
+                    <img src="/assets/bins/bin-equivalent-2-5e79b7de5b4e1f85554fcb4bd455f7ea3cd68e5a3bc5aeb6a984f409b7bae0d6.png" />
+                  </span>
                 </div>
               </div>
+              <div class="mark"></div>
             </div>
           </div>
-          <!-- Add more bins here -->
-        </div>
-      </div>
-    </div>
-
-    <!-- Video Section -->
-    <div id="video-section" class="green-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 px-sm-0 px-4">
-            <h2>Our Latest Video</h2>
-            <div class="video-wrapper">
-              <iframe width="100%" height="600px" src="https://www.youtube.com/embed/w6skNQA4qes" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-            <div class="text-end px-sm-0 px-2">
-              <a href="https://www.youtube.com/@GreenSortingLtd" target="_blank" class="visit-yt-channel">
-                Check out our YouTube Channel
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- About Section -->
-    <div id="about-section" class="position-relative green-section px-sm-0 px-4">
-      <div class="container d-position-relative">
-        <div class="row">
-          <div class="col-12 col-md-9 p-0">
-            <div class="card p-lg-5">
-              <div class="card-title">
-                <h2 class="mb-0">About GreenSorting</h2>
-              </div>
-              <div class="card-body">
-                <p>
-                  GreenSorting provides a wide range of tailor made waste management and recycling solutions to businesses & local authorities throughout the South East of England.
-                </p>
-              </div>
-              <div class="card-footer">
-                <a href="about.html" class="btn btn-primary">MORE ABOUT US</a>
-                <a href="contact.html" class="btn btn-primary free-quote outline">CONTACT US</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="ellipsis"></div>
-      <img class="truck-bg" src="images/truck.jpg" alt="Truck">
-    </div>
-
-    <!-- Blog Section -->
-    <div id="blog-section" class="green-section px-sm-0 px-4">
-      <div class="text-center section-title">
-        <h2 class="mb-0">
-          Latest Blog Posts
-        </h2>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-6">
-            <div class="card blog-item">
-              <div class="card-body">
-                <a href="blog-post-1.html">
-                  <img src="images/blog-post-1.jpg" alt="Blog Post 1">
-                </a>
-                <a class="summary positio-absolute p-4" href="blog-post-1.html">
-                  <h4 class="mb-3 title">Blog Post 1</h4>
-                  <p class="description mb-3">This is a sample blog post.</p>
-                  <div class="d-fllex">
-                    <img class="avatar" src="images/avatar.jpg" alt="Avatar">
-                    <span class="name ms-2">Author</span>
-                    <span class="date ms-2">Date</span>
+          <div class="bin-img">
+            <div class="d-flex flex-column">
+              <div class="d-flex">
+                <img src="/assets/bins/bin-2-715877bddd7dc7b7897339f557bac4e35d3e0b1a6b6dca1754a75e633d9d3557.png" />
+                  <div class="arrow" id="arrow-2">
+                    <img src="/assets/bins/Arrow-top-7725bfa48499d2606c8baaee3c58301bdc69817181face35562cc2e37e223e9e.svg" />
+                      <div>583mm</div>
                   </div>
-                </a>
               </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-6">
-            <div class="card blog-item">
-              <div class="card-body">
-                <a href="blog-post-2.html">
-                  <img src="images/blog-post-2.jpg" alt="Blog Post 2">
-                </a>
-                <a class="summary positio-absolute p-4" href="blog-post-2.html">
-                  <h4 class="mb-3 title">Blog Post 2</h4>
-                  <p class="description mb-3">This is another sample blog post.</p>
-                  <div class="d-fllex">
-                    <img class="avatar" src="images/avatar.jpg" alt="Avatar">
-                    <span class="name ms-2">Author</span>
-                    <span class="date ms-2">Date</span>
-                  </div>
-                </a>
+              <div class="bottom-arrow">
+                <img src="/assets/bins/Arrow-bottom-994b35f41ffa2e2dfcf0539afe6d3fafc3e1d1bd5060ba57b203907132c3ba80.svg" />
+                  <div>737mm</div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-
-    <!-- Testimonial Section -->
-    <div id="testimonial-section" class="position-relative green-section px-sm-0 px-4">
-      <img class="position-absolute curve-top" src="images/curve-top.jpg" alt="Curve Top">
-      <div class="container">
-        <h2 class="text-center">
-          What our clients say about us
-        </h2>
-        <div class="row">
-          <div class="col-12 col-md-4">
-            <div class="card">
-              <div class="card-body d-flex text-center">
-                <div class="stars mx-auto">
-                  <img src="images/star.jpg" alt="Star">
-                  <img src="images/star.jpg" alt="Star">
-                  <img src="images/star.jpg" alt="Star">
-                  <img src="images/star.jpg" alt="Star">
-                  <img src="images/star.jpg" alt="Star">
+        <div class='bin' data-width='98' id='bin-3'>
+          <div class="detail-bin-log border">
+            <div class="bin-log">
+              <div class="detail-bin-title">660L Wheelie Bin</div>
+              <div class="detail-bin-more d-flex">
+                <div>
+                  Dimensions:
+                  <span>
+                    <ul>
+                      <li>Height: 1213mm</li>
+                      <li>Depth: 780mm</li>
+                      <li>Width: 1373mm</li>
+                    </ul>
+                  </span>
                 </div>
-                <p class="testimonial">This is a sample testimonial.</p>
-                <p class="name">Client</p>
+                <div>
+                  <span>
+                    <img src="/assets/bins/bin-equivalent-3-04cb700fbc8eaab8e04f144c9bab32e205487470ed0833ff3efafabd4eca68ef.png" />
+                  </span>
+                </div>
+              </div>
+              <div class="mark"></div>
+            </div>
+          </div>
+          <div class="bin-img">
+            <div class="d-flex flex-column">
+              <div class="d-flex">
+                <img src="/assets/bins/bin-3-a21753e8e7b907e2150988a82bbecea50761a94b15931d9c9a202c4ef9721511.png" />
+                  <div class="arrow" id="arrow-3">
+                    <img src="/assets/bins/Arrow-top-7725bfa48499d2606c8baaee3c58301bdc69817181face35562cc2e37e223e9e.svg" />
+                      <div>1213mm</div>
+                  </div>
+              </div>
+              <div class="bottom-arrow">
+                <img src="/assets/bins/Arrow-bottom-994b35f41ffa2e2dfcf0539afe6d3fafc3e1d1bd5060ba57b203907132c3ba80.svg" />
+                  <div>1373mm</div>
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-4">
-            <div class="card">
-              <div class="card-body d-flex text-center">
-                <div class="stars mx-auto">
-                  <img src="images/star.jpg" alt="Star">
-                  <img src="images/star.jpg" alt="Star">
-                  <img src="images/star.jpg" alt="Star">
-                  <img src="images/star.jpg" alt="
+        </div>
+        <div class='bin' data-width='97' id='bin-4'>
+          <div class="detail-bin-log border">
+            <div class="bin-log">
+              <div class="detail-bin-title">1100l wheelie bin</div>
+              <div class="detail-bin-more d-flex">
+                <div>
+                  Dimensions:
+                  <span>
+                    <ul>
+                      <li>Height: 1354mm</li>
+                      <li>Depth: 1073mm</li>
+                      <li>Width: 1373mm</li>
+                    </ul>
+                  </span>
+                </div>
+                <div>
+                  <span>
+                    <img src="/assets/bins/bin-equivalent-4-6c72dbecf45d828f930fd3471406201ebe944e50d77805b6222451ace2b4c154.png" />
+                  </span>
+                </div>
+              </div>
+              <div class="mark"></div>
+            </div>
+          </div>
+          <div class="bin-img">
+            <div class="d-flex flex-column">
+              <div class="d-flex">
+                <img src="/assets/bins/bin-4-c79f0318eaf6baf892f677e83c42b0dfd493b8acac39ea5dcb98b819a848eb7f.png" />
+                  <div class="arrow" id="arrow-4">
+                    <img src="/assets/bins/Arrow-top-7725bfa48499d2606c8baaee3c58301bdc69817181face35562cc2e37e223e9e.svg" />
+                      <div>1354mm</div>
+                  </div>
+              </div>
+              <div class="bottom-arrow">
+                <img src="/assets/bins/Arrow-bottom-994b35f41ffa2e2dfcf0539afe6d3fafc3e1d1bd5060ba57b203907132c3ba80.svg" />
+                  <div>1373mm</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='bin' data-width='124' id='bin-5'>
+          <div class="detail-bin-log border">
+            <div class="bin-log">
+              <div class="detail-bin-title">2200l wheelie bin</div>
+              <div class="detail-bin-more d-flex">
+                <div>
+                  Dimensions:
+                  <span>
+                    <ul>
+                      <li>Height: 1400mm</li>
+                      <li>Depth: 1000mm</li>
+                      <li>Width: 2040mm</li>
+                    </ul>
+                  </span>
+                </div>
+                <div>
+                  <span>
+                    <img src="/assets/bins/bin-equivalent-5-1865f3dfa97a3b9ead0bd2684d6a8431672c7d6e331132e0af237efc19eaab01.png" />
+                  </span>
+                </div>
+              </div>
+              <div class="mark"></div>
+            </div>
+          </div>
+          <div class="bin-img">
+            <div class="d-flex flex-column">
+              <div class="d-flex">
+                <img src="/assets/bins/bin-5-289ff7f0f5334a8286b853f68a0129c4783ddd321b8c28364489e7a7f927df46.png" />
+                  <div class="arrow" id="arrow-5">
+                    <img src="/assets/bins/Arrow-top-7725bfa48499d2606c8baaee3c58301bdc69817181face35562cc2e37e223e9e.svg" />
+                      <div>1400mm</div>
+                  </div>
+              </div>
+              <div class="bottom-arrow">
+                <img src="/assets/bins/Arrow-bottom-994b35f41ffa2e2dfcf0539afe6d3fafc3e1d1bd5060ba57b203907132c3ba80.svg" />
+                  <div>2040mm</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='bin' data-width='125' id='bin-6'>
+          <div class="detail-bin-log border" id="dialog-6">
+            <div class="bin-log">
+              <div class="detail-bin-title">8 cubic yard</div>
+              <div class="detail-bin-subtitle">Front End Loader skip</div>
+              <div class="detail-bin-more d-flex">
+                <div>
+                  Dimensions:
+                  <span>
+                    <ul>
+                      <li>Height: 2135mm</li>
+                      <li>Depth: 2215mm</li>
+                      <li>Width: 2050mm</li>
+                    </ul>
+                  </span>
+                </div>
+                <div>
+                  <span>
+                    <img src="/assets/bins/bin-equivalent-6-54e1084fb1712e494032c5525781b32d158fa0ab94e252810a520d18a1fab689.png" />
+                  </span>
+                </div>
+              </div>
+              <div class="mark"></div>
+            </div>
+          </div>
+          <div class="bin-img">
+            <div class="d-flex flex-column">
+              <div class="d-flex">
+                <img src="/assets/bins/bin-6-d108c6bfc53857d0145f49c15e8e17a75ba802a1877bdcc3a7f9c1a69d4b61ec.png" />
+                  <div class="arrow" id="arrow-6">
+                    <img src="/assets/bins/Arrow-top-7725bfa48499d2606c8baaee3c58301bdc69817181face35562cc2e37e223e9e.svg" />
+                      <div>2135mm</div>
+                  </div>
+              </div>
+              <div class="bottom-arrow">
+                <img src="/assets/bins/Arrow-bottom-994b35f41ffa2e2dfcf0539afe6d3fafc3e1d1bd5060ba57b203907132c3ba80.svg" />
+                  <div>2050mm</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='bin' data-width='268' id='bin-7'>
+          <div class="detail-bin-log border" id="dialog-7">
+            <div class="bin-log">
+              <div class="detail-bin-title">14 cubic yard</div>
+              <div class="detail-bin-subtitle">Front End Loader skip</div>
+              <div class="detail-bin-more d-flex">
+                <div>
+                  Dimensions:
+                  <span>
+                    <ul>
+                      <li>Height: 1830mm</li>
+                      <li>Depth: 4415mm</li>
+                      <li>Width: 4330mm</li>
+                    </ul>
+                  </span>
+                </div>
+                <div>
+                  <span>
+                    <img src="/assets/bins/bin-equivalent-7-ef4f137e16559fe66672b8a798394a1a3c997f819b97b052830b5c998372ed1a.png" />
+                  </span>
+                </div>
+              </div>
+              <div class="mark"></div>
+            </div>
+          </div>
+          <div class="bin-img">
+            <div class="d-flex flex-column">
+              <div class="d-flex">
+                <img src="/assets/bins/bin-7-ad6949475bedbc12add3dd949f3754dcd6ecd4867d51d85ff7aefefb3bf06781.png" />
+                  <div class="arrow" id="arrow-7">
+                    <img src="/assets/bins/Arrow-top-7725bfa48499d2606c8baaee3c58301bdc69817181face35562cc2e37e223e9e.svg" />
+                      <div>1830mm</div>
+                  </div>
+              </div>
+              <div class="bottom-arrow" id="bottom-arrow-7">
+                <img src="/assets/bins/Arrow-bottom-994b35f41ffa2e2dfcf0539afe6d3fafc3e1d1bd5060ba57b203907132c3ba80.svg" />
+                  <div>4330mm</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='bin' data-width='349' id='bin-8'>
+          <div class="detail-bin-log border" id="dialog-8">
+            <div class="bin-log">
+              <div class="detail-bin-title">20 RORO</div>
+              <div class="detail-bin-subtitle">(roll-on, roll-off large skip)</div>
+              <div class="detail-bin-more d-flex">
+                <div>
+                  Dimensions:
+                  <span>
+                    <ul>
+                      <li>Height: 1494mm</li>
+                      <li>Depth: 5790mm</li>
+                      <li>Width: 6145mm</li>
+                    </ul>
+                  </span>
+                </div>
+                <div>
+                  <span>
+                    <img src="/assets/bins/bin-equivalent-8-68e56be788b0749ff5cb71f86f5e7b8d6995a7555367db381aac8e879a7d2c7d.png" />
+                  </span>
+                </div>
+              </div>
+              <div class="mark"></div>
+            </div>
+          </div>
+          <div class="bin-img">
+            <div class="d-flex flex-column">
+              <div class="d-flex">
+                <img src="/assets/bins/bin-8-68777bb0dd29be3619026897dd56013eb8c58307427e0f13966f456ba079910e.png" />
+                  <div class="arrow" id="arrow-8">
+                    <img src="/assets/bins/Arrow-top-7725bfa48499d2606c8baaee3c58301bdc69817181face35562cc2e37e223e9e.svg" />
+                      <div>1494mm</div>
+                  </div>
+              </div>
+              <div class="bottom-arrow" id="bottom-arrow-8">
+                <img src="/assets/bins/Arrow-bottom-994b35f41ffa2e2dfcf0539afe6d3fafc3e1d1bd5060ba57b203907132c3ba80.svg" />
+                  <div>6145mm</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='bin' data-width='500' id='bin-9'>
+          <div class="detail-bin-log border" id="dialog-9">
+            <div class="bin-log">
+              <div class="detail-bin-title">40 RORO</div>
+              <div class="detail-bin-subtitle">(roll-on, roll-off large skip)</div>
+              <div class="detail-bin-more d-flex">
+                <div>
+                  Dimensions:
+                  <span>
+                    <ul>
+                      <li>Height: 2385mm</li>
+                      <li>Depth: 5790mm</li>
+                      <li>Width: 2235mm</li>
+                    </ul>
+                  </span>
+                </div>
+                <div>
+                  <span>
+                    <img src="/assets/bins/bin-equivalent-9-75f7cacd7184c48bab3122513ad96471972207454806a8192d9d096bcf069e12.png" />
+                  </span>
+                </div>
+              </div>
+              <div class="mark"></div>
+            </div>
+          </div>
+          <div class="bin-img">
+            <div class="d-flex flex-column">
+              <div class="d-flex">
+                <img src="/assets/bins/bin-9-dd3ef67331e13aa019dc81bd3dcfe3deb4d270b2605ec52a1f1d29622c5ff74a.png" />
+                  <div class="arrow" id="arrow-9">
+                    <img src="/assets/bins/Arrow-top-7725bfa48499d2606c8baaee3c58301bdc69817181face35562cc2e37e223e9e.svg" />
+                      <div>2385mm</div>
+                  </div>
+              </div>
+              <div class="bottom-arrow" id="bottom-arrow-9">
+                <img src="/assets/bins/Arrow-bottom-994b35f41ffa2e2dfcf0539afe6d3fafc3e1d1bd5060ba57b203907132c3ba80.svg" />
+                  <div>2235mm</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="arrows" class="d-flex mx-auto justify-content-center gap-4">
+    <div id="prev" class="text-primary opacity-50" style="cursor: pointer;">
+      <i class="bi bi-arrow-left" style="font-size: 30px;"></i>
+    </div>
+
+    <div id="next" class="text-primary" style="cursor: pointer;">
+      <i class="bi bi-arrow-right" style="font-size: 30px;"></i>
+    </div>
+  </div>
+  <div class="container row mx-auto">
+    <img width="100" src="/assets/bins/Seperator-b771f00b33cbb0ac2387e36c7b16f04b61d0addd5e5794d7165695024d2dea7d.png" />
+  </div>
+</div>
+
+<div id="video-section" class="green-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 px-sm-0 px-4">
+        <h2>Our Latest <span class="text-primary">Video</span></h2>
+
+        <div class="video-wrapper">
+          <iframe width="100%" height="600px" src="https://www.youtube.com/embed/w6skNQA4qes" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+
+        <div class="text-end px-sm-0 px-2">
+          <a href="https://www.youtube.com/@GreenRecyclingLtd" target="_blank" class="visit-yt-channel">
+            Check out our <span class="text-red">YouTube</span>
+
+            <img height="25" src="/assets/youtube-logo-52e36f662da31ae7480e39d6fcc4369ddb844a0f841b9127ebce62f7070f7b9d.png" />
+          </a>
+        </div>
+
+        <img width="100%" class="devider" src="/assets/bins/Seperator-b771f00b33cbb0ac2387e36c7b16f04b61d0addd5e5794d7165695024d2dea7d.png" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="about-section" class="position-relative green-section px-sm-0 px-4">
+  <div class="container d-position-relative">
+    <div class="row">
+      <div class="col-12 col-md-9 p-0">
+        <div class="card p-lg-5">
+          <div class="card-title">
+            <h2 class="mb-0">About <span class="text-primary">Green Recyling</span></h2>
+          </div>
+
+          <div class="card-body">
+            <p>
+              Green Recycling Ltd provides a wide range of tailor made waste management and recycling solutions to
+              businesses & local authorities throughout the South East of England. With over 30 years experience the
+              Company is at the forefront of Waste and Recycling technology, investing in state of the art equipment to
+              help provide extra-ordinary levels of service to its client base. The family run company has grown
+              steadily over the years to provide workable waste solutions to a complete range of clients.
+              
+              <br>
+              <br>
+              Based in Maldon, Essex, Green Recycling is a leader in its field of providing Waste Disposal and Recycling
+              services that work in partnership, bringing its customers environmental benefits as well as removing
+              waste, thus enhancing quality of life for all.
+            </p>
+          </div>
+
+          <div class="card-footer">
+            <a href="/about" class="btn btn-primary">MORE ABOUT US</a>
+            <a href="/contact" class="btn btn-primary free-quote outline">CONTACT US</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ellipsis"></div>
+  <img class="truck-bg" src="/assets/about/truck-57734cc2f62a61268d572130663ec580de7be48e419ca27b3c7b7db1a1bf4788.png" />
+</div>
+
+<div id="blog-section" class="green-section px-sm-0 px-4">
+  <div class="text-center section-title">
+    <h2 class="mb-0">
+      <span class="text-primary">Latest</span> Blog Posts
+    </h2>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6">
+  <div class="card blog-item">
+    <div class="card-body">
+        <a href="/news/steady-business-in-2024">
+          <img class="" src="https://www.greenrecycling.co.uk/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdnNWIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--22decd3670058bcd21b04fbca56947d70880918a/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RUdGMWRHOWZiM0pwWlc1MFJqb1RjbVZ6YVhwbFgzUnZYMlpwYkd4YkIya0NpZ0pwQW53QiIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--bc943970812b4bbe807f7c8aa61199f199ebd692/441890095_1015903676808592_8756646208215022057_n.jpg" />
+</a>
+      <a class="summary positio-absolute p-4" href="/news/steady-business-in-2024">
+        <h4 class="mb-3 title">Steady business in 2024!</h4>
+        <p class="description mb-3">It has been a busy start to the year with lots of new contracts for waste collection, we have als...</p>
+        <div class="d-fllex">
+          <img class="avatar" src="/assets/blog/avatar-cfe457b3dbc93723c918227f687d173310e04bd74c343f2b101364d3a6555135.png" />
+          <span class="name ms-2">Rob</span>
+          <span class="date ms-2">24/05/2024</span>
+        </div>
+</a>    </div>
+  </div>
+</div>
+<div class="col-12 col-md-6">
+  <div class="card blog-item">
+    <div class="card-body">
+        <a href="/news/2022-a-really-really-busy-year">
+          <img class="" src="https://www.greenrecycling.co.uk/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBJQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5903a05054a64350c474b1d6b16070829b7f6425/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RUdGMWRHOWZiM0pwWlc1MFJqb1RjbVZ6YVhwbFgzUnZYMlpwYkd4YkIya0NpZ0pwQW53QiIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--bc943970812b4bbe807f7c8aa61199f199ebd692/bins%20on%20lorry.jpg" />
+</a>
+      <a class="summary positio-absolute p-4" href="/news/2022-a-really-really-busy-year">
+        <h4 class="mb-3 title">2022, a really really busy year!!</h4>
+        <p class="description mb-3">Since my last Rob&#39;s ramblings, the year has gone by in a flash. All of our client&#39;s offices, fact...</p>
+        <div class="d-fllex">
+          <img class="avatar" src="/assets/blog/avatar-cfe457b3dbc93723c918227f687d173310e04bd74c343f2b101364d3a6555135.png" />
+          <span class="name ms-2">Rob</span>
+          <span class="date ms-2">18/10/2022</span>
+        </div>
+</a>    </div>
+  </div>
+</div>
+
+    </div>
+
+    <div class="text-center">
+      <a class="btn btn-primary more-posts px-5" href="/news">MORE POSTS</a>
+    </div>
+  </div>
+</div>
+
+<div id="testimonial-section" class="position-relative green-section px-sm-0 px-4">
+  <img class="position-absolute curve-top" src="/assets/testimonial/Shape-0490c4e50d7ab0cc19b63692050f3b765899d9eab97b7ba5621fec561911427c.png" />
+
+
+  <div class="container">
+    <h2 class="text-center">
+      What our <span class="text-primary">clients</span> say about us
+    </h2>
+
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <div class="card">
+          <div class="card-body d-flex text-center">
+            <div class="stars mx-auto">
+              <img src="/assets/testimonial/Star-64f3db0947ef5e1e0c241493375fb74565fef86fecc1425e328c0ba8d1f202e1.svg" />
+              <img src="/assets/testimonial/Star-64f3db0947ef5e1e0c241493375fb74565fef86fecc1425e328c0ba8d1f202e1.svg" />
+              <img src="/assets/testimonial/Star-64f3db0947ef5e1e0c241493375fb74565fef86fecc1425e328c0ba8d1f202e1.svg" />
+              <img src="/assets/testimonial/Star-64f3db0947ef5e1e0c241493375fb74565fef86fecc1425e328c0ba8d1f202e1.svg" />
+              <img src="/assets/testimonial/Star-64f3db0947ef5e1e0c241493375fb74565fef86fecc1425e328c0ba8d1f202e1.svg" />
+            </div>
+
+            <p class="testimonial">A fast, efficient cost-effective situation to all of our commercial waste and recycling requirements, such as Food, Glass, General waste and Mixed Recycling.</p>
+            <p class="name">Bar & Restaurant - Maldon</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <div class="card">
+          <div class="card-body d-flex text-center">
+            <div class="stars mx-auto">
+              <img src="/assets/testimonial/Star-64f3db0947ef5e1e0c241493375fb74565fef86fecc1425e328c0ba8d1f202e1.svg" />
+              <img src="/assets/testimonial/Star-64f3db0947ef5e1e0c241493375fb74565fef86fecc1425e328c0ba8d1f202e1.svg" />
+              <img src="/assets/testimonial/Star-64f3db0947ef5e1e0c241493375fb74565fef86fecc1425e328c0ba8d1f202e1.svg" />
+              <img src="/assets/testimonial/Star-64f3db0947ef5e1e0c241493375fb74565fef86fecc1425e328c0ba8d1f202e1.svg" />
+              <img src="/assets/testimonial/Star-64f3db0947ef5e1e0c241493375fb74565fef86fecc1425e328c0ba8d1f202e1.svg" />
+            </div>
+
+            <p class="testimonial">What an excellent job you guys are doing. What a difference from the last company we used who frequently did not show up. We have not had one single issue with Green Recycling and I’m so grateful for that. Our sincere thanks to your drivers and team for delivering a great service.</p>
+            <p class="name">Plastic Manufacturing - Colchester</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <div class="card">
+          <div class="card-body d-flex text-center">
+            <div class="stars mx-auto">
+              <img src="/assets/testimonial/Star-64f3db0947ef5e1e0c241493375fb74565fef86fecc1425e328c0ba8d1f202e1.svg" />
+              <img src="/assets/testimonial/Star-64f3db0947ef5e1e0c241493375fb74565fef86fecc1425e328c0ba8d1f202e1.svg" />
+              <img src="/assets/testimonial/Star-64f3db0947ef5e1e0c241493375fb74565fef86fecc1425e328c0ba8d1f202e1.svg" />
+              <img src="/assets/testimonial/Star-64f3db0947ef5e1e0c241493375fb74565fef86fecc1425e328c0ba8d1f202e1.svg" />
+              <img src="/assets/testimonial/Star-64f3db0947ef5e1e0c241493375fb74565fef86fecc1425e328c0ba8d1f202e1.svg" />
+            </div>
+
+            <p class="testimonial">It’s a pleasure to recommend Green Recycling. We use a significant amount of their services (FEL, Roll-On Roll-Off, wood and general waste skips). Their service is genuinely flawless. The collection of our skips is always as promised and never exceeds two days, which we consider excellent</p>
+            <p class="name">Community Housing Supply and Support - Chelmsford</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="ig-post" class="green-section px-sm-0 px-4">
+  <div class="container">
+    <h2 class="text-center">
+      Our Latest <span class="text-ig">Instagram</span> Posts
+    </h2>
+    <div class="row carousel">
+        <div class="col-12 col-md-3">
+          <div class="item">
+            <a target="_blank" class="text-decoration-none text-black" href="https://www.instagram.com/greenrecycling_/">
+              <img class="img-fluid mb-2" loading="lazy" src="https://www.greenrecycling.co.uk/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdllWIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--376cdc66f5c2ef8c5c729ca0ed47e47e96602417/426126541_950833679982259_6192796484689875575_n.jpg" />
+              <p class="mb-0">♻💚When we say we recycle everything possible, this is what we mean 💚♻
+We use rigorous sorting processes, including infrared technology and AI to help us sort as much waste as possible into various categories for recycling. 
+
+#recycle #waste #ai #robot #technology #machinary #yard #drivers #recycling #sustainable #sustainabilty</p>
+</a>          </div>
+        </div>
+        <div class="col-12 col-md-3">
+          <div class="item">
+            <a target="_blank" class="text-decoration-none text-black" href="https://www.instagram.com/greenrecycling_/">
+              <img class="img-fluid mb-2" loading="lazy" src="https://www.greenrecycling.co.uk/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdk1WIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3ac15fec9c4579c57a523c9b73e2cf7a65f6e7b0/417477051_961389348926692_7514051379767658026_n.jpg" />
+              <p class="mb-0">💚♻ Our beloved Jerry is retiring! ♻💚
+After fourteen years at Green Recycling, Jerry is hanging up his bin selling shoes to spend more time doing the things he loves (apparently making us tea is not one of them). 
+
+You will be missed so much, it will not be the same without you 💚
+
+#retire #retirement #Fridayfeeling #staff #work #Friday #retirementgoals #happy #working #waste #recycling #achievements #goals</p>
+</a>          </div>
+        </div>
+        <div class="col-12 col-md-3">
+          <div class="item">
+            <a target="_blank" class="text-decoration-none text-black" href="https://www.instagram.com/greenrecycling_/">
+              <img class="img-fluid mb-2" loading="lazy" src="https://www.greenrecycling.co.uk/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdklWIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--38ef57b51d8dfcfc548c2ef8edb2f51bbd3fc4e5/417524456_959057605826533_7781302032792535886_n.jpg" />
+              <p class="mb-0">📢Our new website is live 📢
+
+https://www.greenrecycling.co.uk/
+
+#website #webdesign #new #newwebsite #waste #recycling #recycle</p>
+</a>          </div>
+        </div>
+        <div class="col-12 col-md-3">
+          <div class="item">
+            <a target="_blank" class="text-decoration-none text-black" href="https://www.instagram.com/greenrecycling_/">
+              <img class="img-fluid mb-2" loading="lazy" src="https://www.greenrecycling.co.uk/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdThWIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8912193301ae4dcef4a226793ad2a0a55e2157ad/425279834_946728863726074_891510850771596553_n.jpg" />
+              <p class="mb-0">🌏🌊 Did you know.... 🌊🌏
+Marine pollution comes in many forms, but over 80% of this comes from land-based activities. This can any of the below that contributes to pollution. 
+
+➡Accidental spills
+➡Discarded fishing nets/ waste
+➡Toxic Chemicals
+➡Run off from drains and rivers (including effluent discharge).
+
+Source: Ocean Protect 
+https://www.oceanprotect.org/resources/issue-briefs/marine-pollution/
+
+#Pollution #Marine #marinepollution #water #sea #environment #environmentalawareness #sustainability #sustainable #sealife #facts #didyouknow</p>
+</a>          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+    <footer class="green-section">
+  <img src="/assets/blog/Shape-949797e6d8421ce8d9eebfb983b959a534c4cb9219f0fa3a4e11c5982674b9e8.png" />
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="subscription-container d-flex">
+            <h2>Subscribe to our Newsletter</h2>
+            <div class="subscription-form-wrapper">
+              <form class="d-flex js-cm-form" id="subForm" action="https://www.createsend.com/t/subscribeerror?description=" method="post"
+              data-id="30FEA77E7D0A9B8D7616376B900632314246877A5F4647B0F36958BD53AA2FE99361D7323DE3C7AB4864F35B1DC10964CD70F7BFA741CD86D2FF59F13DAC2810">
+                <input type="text" placeholder="Enter your email" autocomplete="Email" aria-label="Email" class="js-cm-email-input qa-input-email"
+                id="fieldEmail" maxlength="200" name="cm-jruuiik-jruuiik" required type="email">
+                <button type="submit" class="btn btn-primary">SUBSCRIBE NOW</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 d-flex justify-content-between link-section">
+          <div class="links">
+            <a href="/about">About Us</a>
+            <a href="/services">Services</a>
+            <a href="/contact">Contact</a>
+          </div>
+
+          <div class="social-media-links">
+            <a class="text-decoration-none" href="https://www.facebook.com/greenrecyclingltd" target="_blank">
+              <img src="/assets/icons/Facebook-ff3ae61c6bee90f6dec337297332262a7cc4bb4e0f02611a16dce0b99bf745b5.png" />
+            </a>
+            <a class="text-decoration-none" href="https://twitter.com/GreenRecycling_" target="_blank">
+              <img src="/assets/icons/Twitter-d93d053cde2c60ae8a337248d832082c39e5b6185b1cedfe1e824d96baaaa56f.png" />
+            </a>
+            <a class="text-decoration-none" href="https://youtube.com/@GreenRecyclingLtd?si=abxo4fn_pbi6b-Wk" target="_blank">
+              <img src="/assets/icons/Youtube-5c34c73e98eb0eb70e2056e4282c4a9f08188952f59667d4a2e05cd744f738d4.png" />
+            </a>
+            <a class="text-decoration-none" href="https://www.linkedin.com/company/green-recycling-ltd/" target="_blank">
+              <img src="/assets/icons/LinkedIn-bc13f6c0c0e07a660626d0b62f488c027d4533c12d7c7bd65c5e523d15369950.png" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <hr class="devider">
+
+      <div class="partner-footer">
+        <div class="footer-partner">
+          <img src="/assets/partner/chas-d48d6f085a1c524fb525c06ac6a8040e0bafdfcd11390a293dd094ad20edf891.png" />
+        </div>
+        <div class="footer-partner">
+          <img src="/assets/partner/ciwm-ade89a531d914c00e81ef630738ed10e022337837c674ffcaf9236806046981e.png" />
+        </div>
+        <div class="footer-partner">
+          <img src="/assets/partner/matthiesse-a80351e5e6ad9fcd270248fbfb608dcd13dcf3c8f18ffa4b4e05b646ec923cec.png" />
+        </div>
+        <div class="footer-partner">
+          <img src="/assets/partner/rha-7da6dbe2b217be07d3c4b378282625146812367f80193ae1f69b9d75409ce8b8.png" />
+        </div>
+        <div class="footer-partner">
+          <img src="/assets/partner/tomra-728bb1f70660cf5121128aeda670195af5ec4e263ffee6b2988595c5c3cc7943.png" />
+        </div>
+        <div class="footer-partner">
+          <img src="/assets/partner/wamitab-b141fff67008e540ff6a9f17db5f231da5330d53f987f322f6ef690e939bb40c.png" />
+        </div>
+      </div>
+
+      <div class="alright-reserved text-center position-relative">
+        <p class="mb-0 position-absolute">© 2023 Green Recycling. All rights reserved.</p>
+        <img height="44" src="/assets/logo-f3130a43b197f67fd5c198ce5f36b1cf7903fadd3aa1c12246f9c86c3563521d.png" />
+          <div></div>
+      </div>
+    </div>
+</footer>
+
+  </body>
+</html>
