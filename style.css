@@ -79,23 +79,23 @@ body {
 }
 
 .about-text h2 {
-    font-size: 3.5em; /* Adjusted size for About section subheading */
+    font-size: 2.5em; /* Smaller size for About section subheading */
     margin: 20px 0;
     color: #00695c;
 }
 
 .about-text p {
-    font-size: 1.5em; /* Adjusted size for About section paragraph */
+    font-size: 1.2em; /* Smaller size for About section paragraph */
 }
 
 .problems-text h2 {
-    font-size: 3.5em; /* Adjusted size for Problems section subheading */
+    font-size: 2.5em; /* Smaller size for Problems section subheading */
     margin: 20px 0;
     color: #00695c;
 }
 
 .problems-text p {
-    font-size: 1.5em; /* Adjusted size for Problems section paragraph */
+    font-size: 1.2em; /* Smaller size for Problems section paragraph */
 }
 
 .get-started {
@@ -106,11 +106,11 @@ body {
 }
 
 .get-started h2 {
-    font-size: 3.5em; /* Adjusted size for Get Started subheading */
+    font-size: 2.5em; /* Smaller size for Get Started subheading */
 }
 
 .get-started p {
-    font-size: 1.5em; /* Adjusted size for Get Started text */
+    font-size: 1.2em; /* Smaller size for Get Started text */
 }
 
 .button {
