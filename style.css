@@ -78,10 +78,14 @@ body {
     padding: 50px 20px;
 }
 
-h2 {
-    font-size: 5em; /* Increased size for subheadings */
+.about-text h2, .problems-text h2 {
+    font-size: 4em; /* Increased size for section subheadings */
     margin: 20px 0;
     color: #00695c;
+}
+
+.about-text p, .problems-text p {
+    font-size: 2em; /* Increased size for paragraph text */
 }
 
 .get-started {
@@ -92,15 +96,11 @@ h2 {
 }
 
 .get-started h2 {
-    font-size: 5em; /* Increased size for Get Started subheading */
+    font-size: 4em; /* Increased size for Get Started subheading */
 }
 
 .get-started p {
     font-size: 2em; /* Increased size for Get Started text */
-}
-
-.about-text p, .problems-text p {
-    font-size: 2em; /* Increased size for paragraph text */
 }
 
 .button {
@@ -110,7 +110,7 @@ h2 {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1.5em; /* Increased size for button text */
+    font-size: 1.5em; /* Size for button text */
     text-decoration: none;
     transition: background 0.3s; /* Smooth transition for button */
 }
