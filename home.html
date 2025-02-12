@@ -9,6 +9,19 @@
     <link rel="stylesheet" href="style.css?v=1.3"> <!-- Update version number -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css">
+    <style>
+        .slide {
+            width: 100%;
+            height: 100%;
+            display: none;
+            opacity: 0; /* Start with transparent */
+            transition: opacity 1s ease; /* Smooth transition */
+        }
+        .slide.active {
+            display: block; /* Show active slide */
+            opacity: 1; /* Fully visible */
+        }
+    </style>
 </head>
 <body>
 
@@ -23,12 +36,12 @@
 </header>
 
 <div class="slideshow" id="slideshow">
-    <img src="https://rsoftcreators.github.io/greensorting.github.io/images/landscape1.png" alt="Slideshow Image 1" class="slide">
-    <img src="https://rsoftcreators.github.io/greensorting.github.io/images/slide5.png" alt="Slideshow Image 2" class="slide">
-    <img src="https://rsoftcreators.github.io/greensorting.github.io/images/landscape7.png" alt="Slideshow Image 3" class="slide">
-    <img src="https://rsoftcreators.github.io/greensorting.github.io/images/landscape8.png" alt="Slideshow Image 4" class="slide">
+    <img src="https://rsoftcreators.github.io/greensorting.github.io/images/landscape1.png" alt="Slideshow Image 1" class="slide active">
+    <img src="https://rsoftcreators.github.io/greensorting.github.io/images/landscape1.png" alt="Slideshow Image 2" class="slide">
+    <img src="https://rsoftcreators.github.io/greensorting.github.io/images/landscape1.png" alt="Slideshow Image 3" class="slide">
+    <img src="https://rsoftcreators.github.io/greensorting.github.io/images/landscape1.png" alt="Slideshow Image 4" class="slide">
     <img src="https://rsoftcreators.github.io/greensorting.github.io/images/landscape1.png" alt="Slideshow Image 5" class="slide">
-    <img src="https://rsoftcreators.github.io/greensorting.github.io/images/landscape7.png" alt="Slideshow Image 6" class="slide">
+    <img src="https://rsoftcreators.github.io/greensorting.github.io/images/landscape1.png" alt="Slideshow Image 6" class="slide">
 </div>
 
 <div class="content" id="about">
@@ -67,14 +80,22 @@
     // Slideshow functionality
     let currentSlide = 0;
     const slides = document.querySelectorAll('.slide');
+
     const showSlides = () => {
-        slides.forEach((slide, index) => {
-            slide.style.display = index === currentSlide ? 'block' : 'none';
+        // Hide all slides
+        slides.forEach(slide => {
+            slide.classList.remove('active');
         });
+
+        // Show the current slide
+        slides[currentSlide].classList.add('active');
+
+        // Update current slide index
         currentSlide = (currentSlide + 1) % slides.length;
     };
 
-    setInterval(showSlides, 3000); // Change slide every 3 seconds
+    // Change slide every 3 seconds
+    setInterval(showSlides, 3000); 
     showSlides(); // Show the first slide initially
 
     // Initialize AOS

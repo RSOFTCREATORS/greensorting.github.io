@@ -1,19 +1,19 @@
-// JavaScript for autoplay images
-const images = document.querySelectorAll('.autoplay-image');
-let currentIndex = 0;
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
 
-function showNextImage() {
-    images[currentIndex].classList.remove('active');
-    currentIndex = (currentIndex + 1) % images.length;
-    images[currentIndex].classList.add('active');
-}
+const showSlides = () => {
+    // Hide all slides
+    slides.forEach(slide => {
+        slide.classList.remove('active');
+    });
 
-// Initialize the first image
-images.forEach((img, index) => {
-    img.classList.remove('active');
-    if (index === 0) {
-        img.classList.add('active');
-    }
-});
+    // Show the current slide
+    slides[currentSlide].classList.add('active');
 
-setInterval(showNextImage, 3000); // Change image every 3 seconds
+    // Update current slide index
+    currentSlide = (currentSlide + 1) % slides.length;
+};
+
+// Change slide every 3 seconds
+setInterval(showSlides, 3000); 
+showSlides(); // Show the first slide initially
