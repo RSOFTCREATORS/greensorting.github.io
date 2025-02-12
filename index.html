@@ -3,53 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GreenSorting</title>
+    <title>Loading - GreenSorting</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://rsoftcreators.github.io/greensorting.github.io/style.css">
-    <script src="https://rsoftcreators.github.io/greensorting.github.io/script.js" defer></script>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: #e0f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Poppins', sans-serif;
+            color: #004d40;
+            text-align: center;
+        }
+
+        .loading-animation {
+            width: 100px;
+            height: 100px;
+            border: 10px solid transparent;
+            border-top-color: #00695c;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
 </head>
 <body>
 
-<header class="main-header">
-    <h1>GREENSORTING</h1>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About Us</a>
-        <a href="#materials">Materials We Recycle</a>
-        <a href="#getstarted">Get Started</a>
-    </nav>
-</header>
-
-<div class="slideshow">
-    <img src="https://rsoftcreators.github.io/greensorting.github.io/images/landscape1.png" alt="Slideshow Image 1" class="slide">
-    <img src="https://rsoftcreators.github.io/greensorting.github.io/images/landscape1.png" alt="Slideshow Image 2" class="slide">
-    <img src="https://rsoftcreators.github.io/greensorting.github.io/images/landscape1.png" alt="Slideshow Image 3" class="slide">
-    <img src="https://rsoftcreators.github.io/greensorting.github.io/images/landscape1.png" alt="Slideshow Image 4" class="slide">
-    <img src="https://rsoftcreators.github.io/greensorting.github.io/images/landscape1.png" alt="Slideshow Image 5" class="slide">
-    <img src="https://rsoftcreators.github.io/greensorting.github.io/images/landscape1.png" alt="Slideshow Image 6" class="slide">
+<div>
+    <div class="loading-animation"></div>
+    <p>You Are Now Connected! Loading All Contents Before Redirecting To Home Page...</p>
 </div>
 
-<div class="content" id="about">
-    <h2>About Us</h2>
-    <p>At GreenSorting, we are committed to providing innovative recycling solutions that help protect our environment.</p>
-    <img src="https://rsoftcreators.github.io/greensorting.github.io/images/landscape1.png" alt="About Us Image" class="futuristic-image">
-</div>
-
-<div class="content" id="materials">
-    <h2>Materials We Recycle</h2>
-    <p>We recycle a variety of materials including paper, cardboard, glass, metals, and more.</p>
-    <img src="https://rsoftcreators.github.io/greensorting.github.io/images/landscape1.png" alt="Materials Image" class="futuristic-image">
-</div>
-
-<div class="content" id="getstarted">
-    <h2>Get Started</h2>
-    <p>Join us in making a difference. Contact us today to learn more about our services!</p>
-    <a href="/contact" class="button">Contact Us</a>
-</div>
-
-<footer>
-    <p>© 2023 GreenSorting. All rights reserved.</p>
-</footer>
+<script>
+    setTimeout(() => {
+        window.location.href = 'https://rsoftcreators.github.io/greensorting.github.io/home.html'; // Redirect to the homepage
+    }, 5000);
+</script>
 
 </body>
 </html>

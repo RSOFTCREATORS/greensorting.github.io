@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenSorting</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #e0f7fa, #80deea);
+            color: #004d40;
+        }
+
+        .main-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 77, 64, 0.8);
+            padding: 1em;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        .main-header h1 {
+            margin: 0;
+            color: #ffffff;
+        }
+
+        .main-header nav a {
+            color: #ffffff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .slideshow {
+            position: relative;
+            overflow: hidden;
+            height: 300px;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+
+        .content {
+            padding: 100px 20px; /* Adjust for fixed header */
+            text-align: center;
+        }
+
+        .about-container, .materials-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+
+        .about-text, .materials-text {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .futuristic-image {
+            border-radius: 20px;
+            width: 100%;
+            max-width: 400px; /* Adjust image size */
+        }
+
+        h2 {
+            font-size: 2.5em;
+            margin: 20px 0;
+            color: #00695c;
+        }
+
+        .button {
+            background: #00695c;
+            color: #ffffff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #004d40;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+<header class="main-header">
+    <h1>GREENSORTING</h1>
+    <nav>
+        <a href="https://rsoftcreators.github.io/greensorting.github.io/home.html">Home</a>
+        <a href="https://rsoftcreators.github.io/greensorting.github.io/about.html">About Us</a>
+        <a href="https://rsoftcreators.github.io/greensorting.github.io/materials.html">Materials We Recycle</a>
+        <a href="https://rsoftcreators.github.io/greensorting.github.io/getstarted.html">Get Started</a>
+    </nav>
+</header>
+
+<div class="slideshow" id="slideshow">
+    <img src="https://rsoftcreators.github.io/greensorting.github.io/images/slide1.png" alt="Slideshow Image 1" class="slide">
+    <img src="https://rsoftcreators.github.io/greensorting.github.io/images/slide2.png" alt="Slideshow Image 2" class="slide">
+    <img src="https://rsoftcreators.github.io/greensorting.github.io/images/slide3.png" alt="Slideshow Image 3" class="slide">
+    <img src="https://rsoftcreators.github.io/greensorting.github.io/images/slide4.png" alt="Slideshow Image 4" class="slide">
+    <img src="https://rsoftcreators.github.io/greensorting.github.io/images/slide5.png" alt="Slideshow Image 5" class="slide">
+    <img src="https://rsoftcreators.github.io/greensorting.github.io/images/slide6.png" alt="Slideshow Image 6" class="slide">
+</div>
+
+<div class="content" id="about">
+    <h2>About Us</h2>
+    <div class="about-container">
+        <div class="about-text">
+            <p>GreenSorting is a recycling exchange marketplace, an online platform where users trade recyclable items to promote the ideology of “Reusing and Reducing waste.”</p>
+            <p>Our project addresses a significant issue: nearly 75% of thrown-away items are recyclable. This gap contributes to waste in landfills while preventing communities from helping each other. Instead of discarding items, users can sort recyclable materials to earn money for school expenses.</p>
+            <p>Our unique selling proposition focuses on empowering users to recycle while earning funds through collaboration with local organizations.</p>
+        </div>
+        <img src="https://rsoftcreators.github.io/greensorting.github.io/images/about-image.png" alt="About Us Image" class="futuristic-image">
+    </div>
+</div>
+
+<div class="content" id="materials">
+    <h2>Materials We Recycle</h2>
+    <div class="materials-container">
+        <div class="materials-text">
+            <p>We recycle a variety of materials including:</p>
+            <ul>
+                <li>Plastic</li>
+                <li>Paper</li>
+                <li>Cardboard</li>
+                <li>Glass</li>
+                <li>Metals</li>
+                <li>Furniture</li>
+            </ul>
+            <p>By reusing and recycling these materials, we help to reduce waste and promote responsible consumption.</p>
+        </div>
+        <img src="https://rsoftcreators.github.io/greensorting.github.io/images/materials-image.png" alt="Materials Image" class="futuristic-image">
+    </div>
+</div>
+
+<div class="content" id="getstarted">
+    <h2>Get Started</h2>
+    <p>Join us in making a difference. Contact us today to learn more about our services!</p>
+    <a href="/contact" class="button">Contact Us</a>
+</div>
+
+<footer>
+    <p>© 2025 GreenSorting. All rights reserved.</p>
+</footer>
+
+<script>
+    // Slideshow functionality
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const showSlides = () => {
+        slides.forEach((slide, index) => {
+            slide.style.display = index === currentSlide ? 'block' : 'none';
+        });
+        currentSlide = (currentSlide + 1) % slides.length;
+    };
+
+    setInterval(showSlides, 3000); // Change slide every 3 seconds
+    showSlides(); // Show the first slide initially
+</script>
+
+</body>
+</html>
