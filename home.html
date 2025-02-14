@@ -37,6 +37,7 @@
             border-radius: 10px; /* Rounded corners */
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow effect */
             aspect-ratio: 16 / 9; /* Maintain landscape 16:9 aspect ratio */
+            height: auto; /* Height auto to maintain aspect ratio */
         }
 
         .slide {
@@ -58,15 +59,15 @@
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            background-color: rgba(255, 255, 255, 0.8);
-            border: 2px solid #004d40; /* Border color */
+            background-color: #004d40; /* Solid background color */
+            border: none; /* Remove border */
             border-radius: 50%;
             width: 40px;
             height: 40px;
             cursor: pointer;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
             font-size: 24px; /* Increase arrow size */
-            color: #004d40; /* Arrow color */
+            color: white; /* Arrow color */
         }
 
         .arrow.left {
