@@ -15,13 +15,14 @@
             margin: 0;
             padding: 0;
             overflow-x: hidden; /* Prevent horizontal scrolling */
-            background: linear-gradient(to right, #ffffff, #a8e6cf); /* White to light green gradient */
+            background: linear-gradient(to right, #e0f7fa, #a8e6cf); /* Soft gradient */
             color: #004d40;
+            scroll-behavior: smooth; /* Smooth scrolling */
         }
 
         /* Header Styles */
         .main-header {
-            background-color: rgba(0, 77, 64, 0.7); /* Transparent header */
+            background-color: rgba(0, 77, 64, 0.8); /* Semi-transparent header */
             padding: 20px; /* Padding for the header */
             text-align: center;
             width: 100%; /* Ensure it fills the width */
@@ -29,11 +30,13 @@
             top: 0; /* Stick to the top */
             left: 0; /* Align to the left */
             z-index: 10; /* Ensure it stays above other content */
+            transition: background-color 0.3s; /* Smooth transition for background */
         }
 
         .main-header h1 {
             color: white; /* White text for header */
             margin: 0; /* Remove margin */
+            font-size: 2.5em; /* Increase font size */
         }
 
         nav {
@@ -45,15 +48,16 @@
             display: inline-block;
             background-color: #004d40; /* Button background color */
             color: white; /* Button text color */
-            padding: 10px 15px; /* Padding for buttons */
+            padding: 10px 20px; /* Padding for buttons */
             margin: 0 10px; /* Space between buttons */
             border-radius: 5px; /* Rounded corners */
             text-decoration: none; /* Remove underline */
-            transition: background-color 0.3s; /* Smooth transition for hover effect */
+            transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
         }
 
         nav a:hover {
             background-color: #00695c; /* Darker shade on hover */
+            transform: scale(1.05); /* Slight zoom effect */
         }
 
         nav .active {
@@ -116,6 +120,7 @@
             align-items: center;
             justify-content: center;
             font-size: 24px; /* Increase arrow size */
+            transition: background-color 0.3s; /* Smooth background transition */
         }
 
         .arrow.left {
@@ -124,6 +129,10 @@
 
         .arrow.right {
             right: 10px; /* Position right arrow */
+        }
+
+        .arrow:hover {
+            background-color: #00695c; /* Darker shade on hover */
         }
 
         .arrow::before {
@@ -154,7 +163,13 @@
         .section {
             display: flex;
             align-items: center; /* Center vertically */
+            margin: 0 20px; /* Add side margins for spacing */
             margin-bottom: 40px; /* Space between sections */
+            transition: transform 0.3s; /* Smooth transition for hover */
+        }
+
+        .section:hover {
+            transform: translateY(-5px); /* Lift effect on hover */
         }
 
         .section img {
@@ -163,6 +178,72 @@
             object-fit: cover; /* Cover to maintain aspect ratio */
             border-radius: 10px; /* Rounded corners for the image */
             margin-left: 20px; /* Space between text and image */
+            margin-bottom: 20px; /* Space below the image */
+            transition: transform 0.3s; /* Smooth transition */
+        }
+
+        .section img:hover {
+            transform: scale(1.05); /* Slight zoom effect on hover */
+        }
+
+        /* Adjust text container */
+        .about-text, .problems-text {
+            flex: 1; /* Allow text to take remaining space */
+            margin-right: 20px; /* Space between text and image */
+        }
+
+        /* Font size adjustments */
+        h2 {
+            font-size: 1.8em; /* Increase subtitle font size */
+            margin: 0 0 10px; /* Space below the subtitle */
+            position: relative; /* Position for decorations */
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px; /* Position line below heading */
+            width: 50px; /* Line width */
+            height: 2px; /* Line height */
+            background-color: #00bfae; /* Line color */
+        }
+
+        p {
+            font-size: 1.1em; /* Increase paragraph font size */
+            line-height: 1.6; /* Improve line spacing */
+            margin: 0; /* Remove default margin */
+        }
+
+        /* Get Started Section Styles */
+        .get-started {
+            text-align: center; /* Center the text */
+            padding: 60px 20px; /* Add padding for spacing */
+            margin: 50px 0; /* Margin above and below */
+            background-color: rgba(0, 77, 64, 0.1); /* Light background */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow effect */
+        }
+
+        .get-started h3 { /* Changed to h3 to avoid underline */
+            margin: 0 0 10px; /* Space below the title */
+            font-size: 1.8em; /* Title font size */
+        }
+
+        .get-started .button {
+            display: inline-block;
+            background-color: #004d40; /* Button background color */
+            color: white; /* Button text color */
+            padding: 15px 30px; /* Padding for button */
+            border-radius: 5px; /* Rounded corners */
+            text-decoration: none; /* Remove underline */
+            transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+            margin-top: 20px; /* Space above button */
+        }
+
+        .get-started .button:hover {
+            background-color: #00695c; /* Darker shade on hover */
+            transform: scale(1.05); /* Slight zoom effect */
         }
 
         /* Ensure the first section background fills the width */
@@ -171,6 +252,23 @@
             padding: 20px 0; /* Padding for the first section */
             width: 100%; /* Ensure it fills the width */
         }
+
+        /* Footer Styles */
+        footer {
+            background-color: rgba(0, 77, 64, 0.9); /* Darker semi-transparent footer background */
+            color: white; /* White text */
+            text-align: center; /* Center the text */
+            padding: 20px 0; /* Padding for the footer */
+            position: relative; /* Position relative to other elements */
+            bottom: 0; /* Stick to the bottom */
+            width: 100%; /* Ensure it fills the width */
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+        
+        footer:hover {
+            background-color: rgba(0, 77, 64, 1); /* Darker shade on hover */
+        }
     </style>
 </head>
 <body>
@@ -178,10 +276,10 @@
 <header class="main-header">
     <h1>GREENSORTING</h1>
     <nav>
-        <a href="#home" class="active">Home</a>
-        <a href="#about">About Us</a>
-        <a href="#problems">Our Problems to Solve</a>
-        <a href="#getstarted">Get Started</a>
+        <a href="https://rsoftcreators.github.io/greensorting.github.io/home.html" class="active">Home</a>
+        <a href="https://rsoftcreators.github.io/greensorting.github.io/about.html">About Us</a>
+        <a href="https://rsoftcreators.github.io/greensorting.github.io/problems.html">Our Problems to Solve</a>
+        <a href="https://rsoftcreators.github.io/greensorting.github.io/getstarted.html">Get Started</a>
     </nav>
 </header>
 
@@ -197,19 +295,19 @@
 </div>
 
 <div class="content" id="about">
-    <div class="section">
+    <div class="section" data-aos="fade-up">
         <div class="about-text">
             <h2>Why Did We Start GreenSorting?</h2>
             <p>At GreenSorting, we recognized a pressing need in our communities. Conversations with friends and family revealed a common frustration: the overwhelming amount of recyclable materials ending up in landfills. We started GreenSorting to bridge this gap, empowering individuals to recycle effectively while earning rewards.</p>
         </div>
-        <img src="https://rsoftcreators.github.io/greensorting.github.io/images/landscape1.png" alt="GreenSorting Image">
+        <img src="https://rsoftcreators.github.io/greensorting.github.io/images/landscape1.png" alt="GreenSorting Image" style="margin-right: 20px;">
     </div>
 </div>
 
 <div class="curve-bg">
     <div class="content" id="problems">
-        <div class="section">
-            <img src="https://rsoftcreators.github.io/greensorting.github.io/images/landscape1.png" alt="Problems Image">
+        <div class="section" data-aos="fade-up">
+            <img src="https://rsoftcreators.github.io/greensorting.github.io/images/landscape1.png" alt="Problems Image" style="margin-right: 20px;">
             <div class="problems-text">
                 <h2>Our Problems to Solve</h2>
                 <p>Every year, millions of tons of recyclable materials are discarded, contributing to pollution and resource depletion. Our goal at GreenSorting is to tackle this issue head-on. We aim to provide an easy platform for individuals to recycle their materials responsibly while fostering community engagement and awareness about the importance of recycling.</p>
@@ -219,9 +317,9 @@
 </div>
 
 <div class="get-started" id="getstarted">
-    <h2>Get Started</h2>
-    <p>Join us in making a difference! Contact us today to learn more about our services.</p>
-    <a href="mailto:greensorting@gmail.com" class="button">Contact Us Via Email: greensorting@gmail.com</a>
+    <h3>Get Started</h3> <!-- Changed h2 to h3 -->
+    <p>Join us in making a difference! Contact us today to learn more about our services or give feedback and suggestions to improve our services!</p>
+    <a href="mailto:greensorting@gmail.com?subject=Feedbacks/Suggestions" class="button">Contact Us</a>
 </div>
 
 <footer>
