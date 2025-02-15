@@ -78,13 +78,41 @@
         /* Content Styles */
         .content {
             padding: 180px 20px 20px; /* Increased top padding for more space */
-            max-width: 800px; /* Max width for content */
-            margin: auto; /* Center content */
-            text-align: left; /* Align text to the left */
+            display: flex; /* Use flexbox for layout */
+            align-items: flex-start; /* Align items at the start */
+            max-width: 100%; /* Allow full width */
+            position: relative; /* Position relative for absolute children */
+            overflow: hidden; /* Hide overflow */
+        }
+
+        /* Tall Image Placeholders */
+        .left-image,
+        .right-image {
+            width: 300px; /* Set width for images */
+            height: 900px; /* Increased height for tall images (1.5 times 600px) */
+            background-image: url('https://rsoftcreators.github.io/greensorting.github.io/images/landscape1.png');
+            background-size: cover; /* Cover to maintain aspect ratio */
+            background-position: center; /* Center the image */
+            border-radius: 10px; /* Rounded corners */
+            position: absolute; /* Position absolute to allow overflow */
+        }
+
+        .left-image {
+            left: -350px; /* Move left image further outside the left border */
+        }
+
+        .right-image {
+            right: -150px; /* Move right image outside the right border */
+        }
+
+        .text-content {
+            flex: 1; /* Allow text to take up remaining space */
+            margin: 0 20px; /* Margin for spacing */
+            max-width: 800px; /* Set a max width for text */
         }
 
         h2 {
-            font-size: 2em; /* Increase subtitle font size */
+            font-size: 2em; /* Fixed subtitle font size */
             margin: 20px 0; /* Space around the subtitle */
             position: relative; /* Position for decorations */
         }
@@ -100,7 +128,7 @@
         }
 
         p {
-            font-size: 1.1em; /* Increase paragraph font size */
+            font-size: 1.1em; /* Fixed paragraph font size */
             line-height: 1.6; /* Improve line spacing */
         }
 
@@ -132,15 +160,20 @@
 </header>
 
 <div class="content">
-    <h2>Our Vision</h2>
-    <p>At GreenSorting, our vision is to create a sustainable future through innovative recycling solutions that empower communities and protect the environment. We strive to lead the way in recycling practices, making it accessible and rewarding for everyone.</p>
+    <div class="left-image"></div> <!-- Left tall image holder -->
+    <div class="right-image"></div> <!-- Right tall image holder -->
+    
+    <div class="text-content">
+        <h2>Our Vision</h2>
+        <p>At GreenSorting, our vision is to create a sustainable future through innovative recycling solutions that empower communities and protect the environment. We strive to lead the way in recycling practices, making it accessible and rewarding for everyone.</p>
 
-    <h2>Our Mission</h2>
-    <p>Our mission is to provide effective recycling solutions that not only reduce waste but also educate and engage individuals about the importance of recycling in protecting our planet. We aim to foster a culture of sustainability by making recycling easy and rewarding for all.</p>
+        <h2>Our Mission</h2>
+        <p>Our mission is to provide effective recycling solutions that not only reduce waste but also educate and engage individuals about the importance of recycling in protecting our planet. We aim to foster a culture of sustainability by making recycling easy and rewarding for all.</p>
 
-    <h2>Organization Overview</h2>
-    <p>GreenSorting is a project organization created by three middle schoolers from Indonesia who formed a group called LRC (Learning and Recycling Community). The organization was established with the aim of addressing the pressing environmental issues caused by improper waste disposal and a lack of awareness about recycling. Through innovative programs and community engagement, LRC inspires individuals to adopt sustainable practices in their daily lives.</p>
-    <p>Our founders, driven by a passion for environmental conservation, have dedicated their efforts to educating peers and community members about the benefits of recycling. They believe that every small action contributes to a larger impact, and through GreenSorting, they seek to create a ripple effect that encourages responsible waste management. By collaborating with local communities, schools, and organizations, GreenSorting aims to build a culture of sustainability that empowers individuals to take action for a cleaner and greener future.</p>
+        <h2>Organization Overview</h2>
+        <p>GreenSorting is a project organization created by three middle schoolers from Indonesia who formed a group called LRC (Learning and Recycling Community). The organization was established with the aim of addressing the pressing environmental issues caused by improper waste disposal and a lack of awareness about recycling. Through innovative programs and community engagement, LRC inspires individuals to adopt sustainable practices in their daily lives.</p>
+        <p>Our founders, driven by a passion for environmental conservation, have dedicated their efforts to educating peers and community members about the benefits of recycling. They believe that every small action contributes to a larger impact, and through GreenSorting, they seek to create a ripple effect that encourages responsible waste management. By collaborating with local communities, schools, and organizations, GreenSorting aims to build a culture of sustainability that empowers individuals to take action for a cleaner and greener future.</p>
+    </div>
 </div>
 
 <footer>
