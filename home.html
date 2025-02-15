@@ -26,7 +26,51 @@
             text-align: center;
             width: 100%; /* Ensure it fills the width */
             position: fixed; /* Fix position to stay at the top */
+            top: 0; /* Stick to the top */
+            left: 0; /* Align to the left */
             z-index: 10; /* Ensure it stays above other content */
+        }
+
+        .main-header h1 {
+            color: white; /* White text for header */
+            margin: 0; /* Remove margin */
+        }
+
+        nav {
+            margin-top: 10px; /* Space between title and buttons */
+        }
+
+        /* Navigation Buttons */
+        nav a {
+            display: inline-block;
+            background-color: #004d40; /* Button background color */
+            color: white; /* Button text color */
+            padding: 10px 15px; /* Padding for buttons */
+            margin: 0 10px; /* Space between buttons */
+            border-radius: 5px; /* Rounded corners */
+            text-decoration: none; /* Remove underline */
+            transition: background-color 0.3s; /* Smooth transition for hover effect */
+        }
+
+        nav a:hover {
+            background-color: #00695c; /* Darker shade on hover */
+        }
+
+        nav .active {
+            background-color: #00695c; /* Active button color */
+            position: relative; /* Position for bubble effect */
+        }
+
+        nav .active::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -5px; /* Position bubble below button */
+            transform: translateX(-50%);
+            width: 60%; /* Bubble width */
+            height: 4px; /* Bubble height */
+            background-color: #00bfae; /* Bubble color */
+            border-radius: 2px; /* Rounded corners for bubble */
         }
 
         /* Slideshow Styles */
@@ -34,7 +78,7 @@
             position: relative;
             width: 80%; /* Set desired width */
             max-width: 960px; /* Max width for larger screens */
-            margin: 120px auto 20px; /* Center the slideshow and add top margin */
+            margin: 160px auto 20px; /* Adjust top margin to push down */
             overflow: hidden;
             border-radius: 10px; /* Rounded corners */
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow effect */
@@ -64,13 +108,14 @@
             background-color: #004d40; /* Solid background color */
             border: none; /* Remove border */
             border-radius: 50%;
-            width: 40px;
-            height: 40px;
+            width: 50px;
+            height: 50px;
             cursor: pointer;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-size: 24px; /* Increase arrow size */
-            color: white; /* Arrow color */
-            padding: 0; /* Remove padding */
         }
 
         .arrow.left {
@@ -81,11 +126,43 @@
             right: 10px; /* Position right arrow */
         }
 
+        .arrow::before {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+        }
+
+        .arrow.left::before {
+            border-right: 10px solid white; /* White arrow to the left */
+        }
+
+        .arrow.right::before {
+            border-left: 10px solid white; /* White arrow to the right */
+        }
+
         /* Content Styles */
         .content {
             padding: 50px 20px; /* Adjust for spacing */
             text-align: left; /* Align text to the left */
             width: 100%; /* Ensure full width */
+        }
+
+        /* Section with Image and Text */
+        .section {
+            display: flex;
+            align-items: center; /* Center vertically */
+            margin-bottom: 40px; /* Space between sections */
+        }
+
+        .section img {
+            width: 200px; /* Set width for square image */
+            height: 200px; /* Set height for square image */
+            object-fit: cover; /* Cover to maintain aspect ratio */
+            border-radius: 10px; /* Rounded corners for the image */
+            margin-left: 20px; /* Space between text and image */
         }
 
         /* Ensure the first section background fills the width */
@@ -101,7 +178,7 @@
 <header class="main-header">
     <h1>GREENSORTING</h1>
     <nav>
-        <a href="#home">Home</a>
+        <a href="#home" class="active">Home</a>
         <a href="#about">About Us</a>
         <a href="#problems">Our Problems to Solve</a>
         <a href="#getstarted">Get Started</a>
@@ -115,24 +192,24 @@
     <img src="https://rsoftcreators.github.io/greensorting.github.io/images/landscape8.png" alt="Slideshow Image 4" class="slide">
     <img src="https://rsoftcreators.github.io/greensorting.github.io/images/landscape1.png" alt="Slideshow Image 5" class="slide">
     <img src="https://rsoftcreators.github.io/greensorting.github.io/images/landscape7.png" alt="Slideshow Image 6" class="slide">
-    <button class="arrow left" onclick="changeSlide(-1)">&#10094;</button>
-    <button class="arrow right" onclick="changeSlide(1)">&#10095;</button>
+    <button class="arrow left" onclick="changeSlide(-1)"></button>
+    <button class="arrow right" onclick="changeSlide(1)"></button>
 </div>
 
 <div class="content" id="about">
-    <div class="about-container">
+    <div class="section">
         <div class="about-text">
             <h2>Why Did We Start GreenSorting?</h2>
             <p>At GreenSorting, we recognized a pressing need in our communities. Conversations with friends and family revealed a common frustration: the overwhelming amount of recyclable materials ending up in landfills. We started GreenSorting to bridge this gap, empowering individuals to recycle effectively while earning rewards.</p>
         </div>
-        <img src="https://rsoftcreators.github.io/greensorting.github.io/images/landscape1.png" alt="GreenSorting Image" class="curved-image">
+        <img src="https://rsoftcreators.github.io/greensorting.github.io/images/landscape1.png" alt="GreenSorting Image">
     </div>
 </div>
 
 <div class="curve-bg">
     <div class="content" id="problems">
-        <div class="problems-container">
-            <img src="https://rsoftcreators.github.io/greensorting.github.io/images/landscape1.png" alt="Problems Image" class="curved-image">
+        <div class="section">
+            <img src="https://rsoftcreators.github.io/greensorting.github.io/images/landscape1.png" alt="Problems Image">
             <div class="problems-text">
                 <h2>Our Problems to Solve</h2>
                 <p>Every year, millions of tons of recyclable materials are discarded, contributing to pollution and resource depletion. Our goal at GreenSorting is to tackle this issue head-on. We aim to provide an easy platform for individuals to recycle their materials responsibly while fostering community engagement and awareness about the importance of recycling.</p>
