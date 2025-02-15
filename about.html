@@ -104,6 +104,23 @@
             line-height: 1.6; /* Improve line spacing */
         }
 
+        /* Tall Image Placeholders */
+        .tall-images {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0; /* Margin for spacing */
+        }
+
+        .tall-image {
+            flex: 1; /* Take equal space */
+            height: 400px; /* Fixed height for tall images */
+            background-image: url('https://rsoftcreators.github.io/greensorting.github.io/images/landscape1.png');
+            background-size: cover; /* Cover to maintain aspect ratio */
+            background-position: center; /* Center the image */
+            border-radius: 10px; /* Rounded corners */
+            margin: 0 10px; /* Space between images */
+        }
+
         footer {
             background-color: rgba(0, 77, 64, 0.9); /* Darker semi-transparent footer background */
             color: white; /* White text */
@@ -141,6 +158,12 @@
     <h2>Organization Overview</h2>
     <p>GreenSorting is a project organization created by three middle schoolers from Indonesia who formed a group called LRC (Learning and Recycling Community). The organization was established with the aim of addressing the pressing environmental issues caused by improper waste disposal and a lack of awareness about recycling. Through innovative programs and community engagement, LRC inspires individuals to adopt sustainable practices in their daily lives.</p>
     <p>Our founders, driven by a passion for environmental conservation, have dedicated their efforts to educating peers and community members about the benefits of recycling. They believe that every small action contributes to a larger impact, and through GreenSorting, they seek to create a ripple effect that encourages responsible waste management. By collaborating with local communities, schools, and organizations, GreenSorting aims to build a culture of sustainability that empowers individuals to take action for a cleaner and greener future.</p>
+
+    <!-- Tall Images Section -->
+    <div class="tall-images">
+        <div class="tall-image"></div>
+        <div class="tall-image"></div>
+    </div>
 </div>
 
 <footer>
