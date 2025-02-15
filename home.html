@@ -64,13 +64,15 @@
             background-color: #004d40; /* Solid background color */
             border: none; /* Remove border */
             border-radius: 50%;
-            width: 40px;
-            height: 40px;
+            width: 50px;
+            height: 50px;
             cursor: pointer;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-            font-size: 24px; /* Increase arrow size */
             color: white; /* Arrow color */
-            padding: 0; /* Remove padding */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px; /* Increase arrow size */
         }
 
         .arrow.left {
@@ -79,6 +81,23 @@
 
         .arrow.right {
             right: 10px; /* Position right arrow */
+        }
+
+        .arrow::before {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+        }
+
+        .arrow.left::before {
+            border-right: 10px solid white; /* White arrow to the left */
+        }
+
+        .arrow.right::before {
+            border-left: 10px solid white; /* White arrow to the right */
         }
 
         /* Content Styles */
@@ -115,8 +134,8 @@
     <img src="https://rsoftcreators.github.io/greensorting.github.io/images/landscape8.png" alt="Slideshow Image 4" class="slide">
     <img src="https://rsoftcreators.github.io/greensorting.github.io/images/landscape1.png" alt="Slideshow Image 5" class="slide">
     <img src="https://rsoftcreators.github.io/greensorting.github.io/images/landscape7.png" alt="Slideshow Image 6" class="slide">
-    <button class="arrow left" onclick="changeSlide(-1)">&#10094;</button>
-    <button class="arrow right" onclick="changeSlide(1)">&#10095;</button>
+    <button class="arrow left" onclick="changeSlide(-1)"></button>
+    <button class="arrow right" onclick="changeSlide(1)"></button>
 </div>
 
 <div class="content" id="about">
