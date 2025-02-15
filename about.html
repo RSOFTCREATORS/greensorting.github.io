@@ -78,37 +78,40 @@
         /* Content Styles */
         .content {
             padding: 180px 20px 20px; /* Increased top padding for more space */
-            max-width: 800px; /* Max width for content */
-            margin: auto; /* Center content */
-            text-align: left; /* Align text to the left */
             display: flex; /* Use flexbox for layout */
             align-items: flex-start; /* Align items at the start */
+            position: relative; /* Position for overflow */
         }
 
         /* Image Placeholder */
         .side-image {
-            height: 1200px; /* Increased height for the tall image */
+            height: 1200px; /* Increased height for the tall images */
             background-size: cover; /* Cover to maintain aspect ratio */
             background-position: center; /* Center the image */
             border-radius: 10px; /* Rounded corners */
-            width: 150px; /* Set a fixed width for the image */
+            width: 300px; /* Increased width for the images */
             margin: 0 20px; /* Margin for spacing */
+            position: absolute; /* Allow image to overflow */
         }
 
         /* Left Image */
         .left-image {
             background-image: url('https://rsoftcreators.github.io/greensorting.github.io/images/landscape1.png');
+            left: -100px; /* Move left image outside the left border */
         }
 
         /* Right Image */
         .right-image {
             background-image: url('https://rsoftcreators.github.io/greensorting.github.io/images/landscape1.png');
+            right: -100px; /* Move right image outside the right border */
         }
 
         /* Text Content */
         .text-content {
             flex: 1; /* Allow text to take up remaining space */
             margin: 0 20px; /* Margin for spacing */
+            max-width: 800px; /* Set a max width for text */
+            font-size: 1.2em; /* Increase text size */
         }
 
         h2 {
