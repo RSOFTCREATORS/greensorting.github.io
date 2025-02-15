@@ -85,27 +85,36 @@
             align-items: flex-start; /* Align items at the start */
         }
 
-        /* Tall Image Placeholders */
-        .tall-images {
-            display: flex;
-            flex-direction: column; /* Stack images vertically */
-            flex: 1; /* Allow the images to take up space */
-        }
-
-        .tall-image {
-            height: 400px; /* Fixed height for tall images */
-            background-image: url('https://rsoftcreators.github.io/greensorting.github.io/images/landscape1.png');
+        /* Image Placeholder */
+        .side-image {
+            height: 1200px; /* Increased height for the tall image */
             background-size: cover; /* Cover to maintain aspect ratio */
             background-position: center; /* Center the image */
             border-radius: 10px; /* Rounded corners */
-            margin: 0 10px; /* Space between images */
+            width: 150px; /* Set a fixed width for the image */
+            margin: 0 20px; /* Margin for spacing */
+        }
+
+        /* Left Image */
+        .left-image {
+            background-image: url('https://rsoftcreators.github.io/greensorting.github.io/images/landscape1.png');
+        }
+
+        /* Right Image */
+        .right-image {
+            background-image: url('https://rsoftcreators.github.io/greensorting.github.io/images/landscape1.png');
+        }
+
+        /* Text Content */
+        .text-content {
+            flex: 1; /* Allow text to take up remaining space */
+            margin: 0 20px; /* Margin for spacing */
         }
 
         h2 {
             font-size: 2em; /* Increase subtitle font size */
             margin: 20px 0; /* Space around the subtitle */
             position: relative; /* Position for decorations */
-            flex: 3; /* Allow text to take more space */
         }
 
         h2::after {
@@ -151,10 +160,7 @@
 </header>
 
 <div class="content">
-    <div class="tall-images">
-        <div class="tall-image"></div>
-        <div class="tall-image"></div>
-    </div>
+    <div class="side-image left-image"></div> <!-- Left tall image holder -->
     
     <div class="text-content">
         <h2>Our Vision</h2>
@@ -164,9 +170,11 @@
         <p>Our mission is to provide effective recycling solutions that not only reduce waste but also educate and engage individuals about the importance of recycling in protecting our planet. We aim to foster a culture of sustainability by making recycling easy and rewarding for all.</p>
 
         <h2>Organization Overview</h2>
-        <p>GreenSorting is a project organization created by three middle schoolers from Indonesia who formed a group called LRC (Learning and Recycling Community). The organization was established with the aim of addressing the pressing environmental issues caused by improper waste disposal and a lack of awareness about recycling. Through innovative programs and community engagement, LRC inspires individuals to adopt sustainable practices in their daily lives.</p>
+        <p>GreenSorting is a project organization created by three middle schoolers from Indonesia who formed a group called LRC (Learning and Recycling Community), named after the founders Roger, Lionel, and Celine. The organization was established with the aim of addressing the pressing environmental issues caused by improper waste disposal and a lack of awareness about recycling. Through innovative programs and community engagement, LRC inspires individuals to adopt sustainable practices in their daily lives.</p>
         <p>Our founders, driven by a passion for environmental conservation, have dedicated their efforts to educating peers and community members about the benefits of recycling. They believe that every small action contributes to a larger impact, and through GreenSorting, they seek to create a ripple effect that encourages responsible waste management. By collaborating with local communities, schools, and organizations, GreenSorting aims to build a culture of sustainability that empowers individuals to take action for a cleaner and greener future.</p>
     </div>
+
+    <div class="side-image right-image"></div> <!-- Right tall image holder -->
 </div>
 
 <footer>
