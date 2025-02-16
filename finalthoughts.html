@@ -77,37 +77,44 @@
         .section-title {
             text-align: center; /* Center titles */
             font-size: 1.5em; /* Title font size */
-            margin-top: 160px; /* Space from the top of the page */
-            margin-bottom: 10px; /* Space below the title */
+            margin-top: 180px; /* Increased space from the top of the page */
+            margin-bottom: 5px; /* Reduced space below the title */
             color: #004d40; /* Title color */
         }
 
         /* Banner Styles */
-        .banner {
-            width: 80%; /* Set width to 80% of the container */
+        .banner, .canva-embed, .video-container {
+            width: 80%; /* Set width to 80% of the content area */
             height: 0; /* Set height to zero for padding-bottom */
             padding-bottom: 45%; /* 16:9 Aspect Ratio */
-            background-image: url('https://i9.ytimg.com/vi/KF8tm80juVs/maxresdefault.jpg?v=6798f0a6&sqp=COD9xb0G&rs=AOn4CLAvKak2hG5bmiNeXem9h5q_bun3AA');
-            background-size: cover; /* Cover to maintain aspect ratio */
-            background-position: center; /* Center the image */
-            margin: 20px auto; /* Center the banner and add vertical margin */
-            border-radius: 10px; /* Rounded corners */
-        }
-
-        /* Video Styles */
-        .video-container {
-            display: flex;
-            flex-direction: column; /* Stack video title and video */
-            align-items: center; /* Center the video */
-            margin: 20px auto; /* Space around the video */
-            width: 80%; /* Match the width of the banner */
-            height: 0; /* Set height to zero for padding-bottom */
-            padding-bottom: 45%; /* 16:9 Aspect Ratio */
-            background-color: #f0f0f0; /* Light gray background for video holder */
+            margin: 10px auto; /* Center the element and reduce vertical margin */
             border-radius: 10px; /* Rounded corners */
             position: relative; /* Position for absolute elements */
         }
 
+        .banner {
+            background-image: url('https://i9.ytimg.com/vi/KF8tm80juVs/maxresdefault.jpg?v=6798f0a6&sqp=COD9xb0G&rs=AOn4CLAvKak2hG5bmiNeXem9h5q_bun3AA');
+            background-size: cover; /* Cover to maintain aspect ratio */
+            background-position: center; /* Center the image */
+        }
+
+        /* Canva Embed Styles */
+        .canva-embed {
+            box-shadow: 0 2px 8px rgba(63, 69, 81, 0.16); /* Shadow effect */
+            background-color: #f0f0f0; /* Light gray background for Canva holder */
+        }
+
+        .canva-embed iframe {
+            position: absolute; /* Position absolute to fill the container */
+            top: 0; /* Align to the top */
+            left: 0; /* Align to the left */
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            border: none; /* Remove border */
+            border-radius: 10px; /* Rounded corners */
+        }
+
+        /* Video Styles */
         .video-container iframe {
             position: absolute; /* Position absolute to fill the container */
             top: 0; /* Align to the top */
@@ -125,12 +132,12 @@
             max-width: 800px; /* Max width for content */
             margin: auto; /* Center content */
             text-align: left; /* Align text to the left */
-            margin-top: 20px; /* Space above the content */
+            margin-top: 5px; /* Reduced space above the content */
         }
 
         h2 {
             font-size: 2em; /* Increase subtitle font size */
-            margin: 20px 0; /* Space around the subtitle */
+            margin: 15px 0; /* Reduced space around the subtitle */
             position: relative; /* Position for decorations */
         }
 
@@ -166,6 +173,32 @@
         footer:hover {
             background-color: rgba(0, 77, 64, 1); /* Darker shade on hover */
         }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .section-title {
+                margin-top: 120px; /* Adjusted margin for mobile */
+                font-size: 1.2em; /* Smaller title font size */
+            }
+
+            .banner, .canva-embed, .video-container {
+                width: 95%; /* Increase width for mobile */
+                padding-bottom: 56.25%; /* Maintain aspect ratio */
+                margin: 5px auto; /* Reduced margin for mobile */
+            }
+
+            .content {
+                padding: 10px; /* Reduced padding for mobile */
+            }
+
+            h2 {
+                font-size: 1.5em; /* Smaller subtitle font size */
+            }
+
+            p {
+                font-size: 1em; /* Smaller paragraph font size */
+            }
+        }
     </style>
 </head>
 <body>
@@ -184,6 +217,15 @@
 <div class="section-title">Project Documentation</div>
 <div class="banner"></div>
 
+<div class="canva-embed">
+    <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%; padding-bottom: 0; overflow: hidden; border-radius: 8px;">
+        <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0;"
+            src="https://www.canva.com/design/DAGefOE7CS0/KkuB1qpjPWdm_ktLMlh2RA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+        </iframe>
+    </div>
+</div>
+
+<div class="section-title">Video Presentation</div>
 <div class="video-container">
     <iframe src="https://drive.google.com/file/d/1MetPyF3prwtSBNXJLyTTu1Qk1SR-vpUj/preview" allow="autoplay"></iframe>
 </div>
