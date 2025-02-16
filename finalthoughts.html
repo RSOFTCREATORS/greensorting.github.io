@@ -73,29 +73,47 @@
             border-radius: 2px; /* Rounded corners for bubble */
         }
 
+        /* Title Styles */
+        .section-title {
+            text-align: center; /* Center titles */
+            font-size: 1.5em; /* Title font size */
+            margin-top: 160px; /* Space from the top of the page */
+            margin-bottom: 10px; /* Space below the title */
+            color: #004d40; /* Title color */
+        }
+
         /* Banner Styles */
         .banner {
-            width: 100%;
+            width: 80%; /* Set width to 80% of the container */
             height: 0; /* Set height to zero for padding-bottom */
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio (9/16 = 0.5625) */
+            padding-bottom: 45%; /* 16:9 Aspect Ratio */
             background-image: url('https://i9.ytimg.com/vi/KF8tm80juVs/maxresdefault.jpg?v=6798f0a6&sqp=COD9xb0G&rs=AOn4CLAvKak2hG5bmiNeXem9h5q_bun3AA');
             background-size: cover; /* Cover to maintain aspect ratio */
             background-position: center; /* Center the image */
-            margin-top: 100px; /* Increased space below the header */
+            margin: 20px auto; /* Center the banner and add vertical margin */
             border-radius: 10px; /* Rounded corners */
-            position: relative; /* Allow absolute positioning for content */
         }
 
         /* Video Styles */
         .video-container {
             display: flex;
-            justify-content: center; /* Center the video */
-            margin: 20px 0; /* Space around the video */
+            flex-direction: column; /* Stack video title and video */
+            align-items: center; /* Center the video */
+            margin: 20px auto; /* Space around the video */
+            width: 80%; /* Match the width of the banner */
+            height: 0; /* Set height to zero for padding-bottom */
+            padding-bottom: 45%; /* 16:9 Aspect Ratio */
+            background-color: #f0f0f0; /* Light gray background for video holder */
+            border-radius: 10px; /* Rounded corners */
+            position: relative; /* Position for absolute elements */
         }
 
-        iframe {
-            width: 640px; /* Set width */
-            height: 480px; /* Set height */
+        .video-container iframe {
+            position: absolute; /* Position absolute to fill the container */
+            top: 0; /* Align to the top */
+            left: 0; /* Align to the left */
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
             border: none; /* Remove border */
             border-radius: 10px; /* Rounded corners */
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow effect */
@@ -142,6 +160,7 @@
             width: 100%; /* Ensure it fills the width */
             box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
             transition: background-color 0.3s; /* Smooth transition */
+            margin-top: 40px; /* Space above the footer */
         }
 
         footer:hover {
@@ -162,10 +181,11 @@
     </nav>
 </header>
 
+<div class="section-title">Project Documentation</div>
 <div class="banner"></div>
 
 <div class="video-container">
-    <iframe src="https://drive.google.com/file/d/1MetPyF3prwtSBNXJLyTTu1Qk1SR-vpUj/preview" width="640" height="480" allow="autoplay"></iframe>
+    <iframe src="https://drive.google.com/file/d/1MetPyF3prwtSBNXJLyTTu1Qk1SR-vpUj/preview" allow="autoplay"></iframe>
 </div>
 
 <div class="content">
