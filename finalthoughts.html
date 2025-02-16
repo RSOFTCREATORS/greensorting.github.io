@@ -78,7 +78,7 @@
             text-align: center; /* Center titles */
             font-size: 1.5em; /* Title font size */
             margin-top: 180px; /* Increased space from the top of the page */
-            margin-bottom: 10px; /* Reduced space below the title */
+            margin-bottom: 5px; /* Reduced space below the title */
             color: #004d40; /* Title color */
         }
 
@@ -86,7 +86,7 @@
         .banner, .canva-embed, .video-container {
             width: 70%; /* Set width to 70% of the content area */
             height: 0; /* Set height to zero for padding-bottom */
-            padding-bottom: 40%; /* Adjusted aspect ratio for smaller size */
+            padding-bottom: 40%; /* Maintain aspect ratio */
             margin: 10px auto; /* Center the element and reduce vertical margin */
             border-radius: 10px; /* Rounded corners */
             position: relative; /* Position for absolute elements */
@@ -132,7 +132,7 @@
             max-width: 800px; /* Max width for content */
             margin: auto; /* Center content */
             text-align: left; /* Align text to the left */
-            margin-top: 40px; /* Added space above the content */
+            margin-top: 5px; /* Reduced space above the content */
         }
 
         h2 {
@@ -182,14 +182,13 @@
             }
 
             .banner, .canva-embed, .video-container {
-                width: 95%; /* Increase width for mobile */
+                width: 85%; /* Set width to 85% of the content area for smaller elements */
                 padding-bottom: 56.25%; /* Maintain aspect ratio */
-                margin: 5px auto; /* Reduced margin for mobile */
+                margin: 5px auto; /* Center the element and reduce vertical margin */
             }
 
             .content {
                 padding: 10px; /* Reduced padding for mobile */
-                margin-top: 50px; /* Increased space above the content */
             }
 
             h2 {
@@ -199,29 +198,6 @@
             p {
                 font-size: 1em; /* Smaller paragraph font size */
             }
-
-            /* Hamburger Menu Styles */
-            .hamburger {
-                display: block;
-                cursor: pointer;
-                margin: 10px auto; /* Center the hamburger icon */
-                font-size: 1.5em; /* Adjust size of hamburger icon */
-            }
-
-            nav {
-                display: none; /* Hide the original nav on mobile */
-                flex-direction: column; /* Stack items vertically */
-                align-items: center; /* Center items */
-            }
-
-            nav.active {
-                display: flex; /* Show nav when active */
-            }
-
-            nav a {
-                margin: 5px 0; /* Space between buttons */
-                width: 80%; /* Width for buttons */
-            }
         }
     </style>
 </head>
@@ -229,8 +205,7 @@
 
 <header class="main-header">
     <h1>GreenSorting</h1>
-    <div class="hamburger" onclick="toggleNav()">&#9776;</div> <!-- Hamburger Icon -->
-    <nav id="navbar">
+    <nav>
         <a href="https://rsoftcreators.github.io/greensorting.github.io/home.html">Home</a>
         <a href="https://rsoftcreators.github.io/greensorting.github.io/about.html">About Us</a>
         <a href="https://rsoftcreators.github.io/greensorting.github.io/development.html">Development</a>
@@ -266,13 +241,6 @@
 <footer>
     <p>© 2025 GreenSorting. All rights reserved.</p>
 </footer>
-
-<script>
-    function toggleNav() {
-        const navbar = document.getElementById('navbar');
-        navbar.classList.toggle('active');
-    }
-</script>
 
 </body>
 </html>
