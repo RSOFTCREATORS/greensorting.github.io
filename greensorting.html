@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greensorting - Recycling Exchange Marketplace</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8f0;
+            color: #333;
+        }
+        header {
+            background-color: rgba(76, 175, 80, 0.9);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #4CAF50;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #2e7d32;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(76, 175, 80, 0.9);
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        h2 {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .subtitle {
+            text-align: center;
+            color: #555;
+        }
+        .image-placeholder {
+            width: 100%;
+            height: 300px;
+            background-color: #ddd;
+            border: 2px dashed #999;
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            color: #777;
+        }
+        .autoplay-images {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+        }
+        .autoplay-images img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .active {
+            opacity: 1;
+        }
+        .shapes {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+        .shape {
+            width: 150px;
+            height: 150px;
+            background-color: #4CAF50;
+            margin: 10px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Greensorting</h1>
+    <p>Trade Recyclable Items and Help Your Community!</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#goals">Our Goals</a>
+    <a href="#materials">Materials We Collect</a>
+    <a href="#get-started">Get Started</a>
+</nav>
+
+<div class="container" id="home">
+    <h2>Home</h2>
+    <div class="subtitle">Welcome to your recycling exchange marketplace</div>
+    
+    <div class="autoplay-images">
+        <img src="image1.jpg" class="active" alt="Recycling Image 1">
+        <img src="image2.jpg" alt="Recycling Image 2">
+        <img src="image3.jpg" alt="Recycling Image 3">
+        <img src="image4.jpg" alt="Recycling Image 4">
+        <img src="image5.jpg" alt="Recycling Image 5">
+        <img src="image6.jpg" alt="Recycling Image 6">
+    </div>
+</div>
+
+<div class="container" id="about">
+    <h2>About Us</h2>
+    <div class="subtitle">Learn more about our mission and values</div>
+    <div class="image-placeholder">[Image Placeholder]</div>
+    <p>Greensorting is dedicated to connecting communities through recycling. We believe in reusing and reducing waste to create a better environment for future generations.</p>
+</div>
+
+<div class="container" id="goals">
+    <h2>Our Goals</h2>
+    <div class="subtitle">What we aim to achieve</div>
+    <div class="shapes">
+        <div class="shape">Sustainability</div>
+        <div class="shape">Community Support</div>
+        <div class="shape">Reduce Waste</div>
+    </div>
+    <p>Our goals include promoting sustainability, supporting community initiatives, and reducing waste through effective recycling practices.</p>
+</div>
+
+<div class="container" id="materials">
+    <h2>Materials We Collect</h2>
+    <div class="subtitle">Join us in recycling the following materials</div>
+    <div class="image-placeholder">[Image Placeholder]</div>
+    <p>We collect a variety of materials including plastic, glass, and metals. Help us make a difference!</p>
+</div>
+
+<div class="container" id="get-started">
+    <h2>Get Started</h2>
+    <div class="subtitle">Join our community today!</div>
+    <div class="image-placeholder">[Image Placeholder]</div>
+    <p>Sign up to start trading your recyclable items and support community projects.</p>
+</div>
+
+<footer>
+    <p>&copy; 2025 Greensorting. All Rights Reserved.</p>
+</footer>
+
+<script>
+    const images = document.querySelectorAll('.autoplay-images img');
+    let currentIndex = 0;
+    
+    function showNextImage() {
+        images[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % images.length;
+        images[currentIndex].classList.add('active');
+    }
+    
+    setInterval(showNextImage, 1500);
+</script>
+
+</body>
+</html>
