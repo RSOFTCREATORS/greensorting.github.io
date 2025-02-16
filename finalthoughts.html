@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team - GreenSorting</title>
+    <title>Final Thoughts - GreenSorting</title>
     <link rel="icon" href="images/icon.png" type="image/png"> <!-- Favicon link -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -16,7 +16,6 @@
             scroll-behavior: smooth; /* Smooth scrolling */
         }
 
-        /* Header Styles */
         /* Header Styles */
         .main-header {
             background-color: rgba(0, 77, 64, 0.8); /* Semi-transparent header */
@@ -74,12 +73,41 @@
             border-radius: 2px; /* Rounded corners for bubble */
         }
 
+        /* Banner Styles */
+        .banner {
+            width: 100%;
+            height: 0; /* Set height to zero for padding-bottom */
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio (9/16 = 0.5625) */
+            background-image: url('https://i9.ytimg.com/vi/KF8tm80juVs/maxresdefault.jpg?v=6798f0a6&sqp=COD9xb0G&rs=AOn4CLAvKak2hG5bmiNeXem9h5q_bun3AA');
+            background-size: cover; /* Cover to maintain aspect ratio */
+            background-position: center; /* Center the image */
+            margin-top: 100px; /* Increased space below the header */
+            border-radius: 10px; /* Rounded corners */
+            position: relative; /* Allow absolute positioning for content */
+        }
+
+        /* Video Styles */
+        .video-container {
+            display: flex;
+            justify-content: center; /* Center the video */
+            margin: 20px 0; /* Space around the video */
+        }
+
+        iframe {
+            width: 640px; /* Set width */
+            height: 480px; /* Set height */
+            border: none; /* Remove border */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow effect */
+        }
+
         /* Content Styles */
         .content {
-            padding: 150px 20px; /* Increased top padding for header space */
+            padding: 20px; /* Padding for content */
             max-width: 800px; /* Max width for content */
             margin: auto; /* Center content */
             text-align: left; /* Align text to the left */
+            margin-top: 20px; /* Space above the content */
         }
 
         h2 {
@@ -98,65 +126,12 @@
             background-color: #00bfae; /* Line color */
         }
 
-        .profile {
-            position: relative; /* For absolute positioning of lines */
-            margin: 80px 0; /* Increased space between profiles */
-            padding: 20px;
-            border-radius: 10px; /* Rounded corners */
-            background-color: white; /* Background for profile */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+        p {
+            font-size: 1.1em; /* Increase paragraph font size */
+            line-height: 1.6; /* Improve line spacing */
         }
 
-        .profile img {
-            width: 120px; /* Profile image width */
-            height: 120px; /* Profile image height */
-            border-radius: 50%; /* Circular image */
-            position: absolute; /* Position for curved lines */
-            top: -60px; /* Adjust to place image above the profile box */
-            left: 50%; /* Center image */
-            transform: translateX(-50%); /* Adjust centering */
-            z-index: 1; /* Ensure image is above the lines */
-        }
-
-        .line {
-            position: absolute; /* Position for the connecting line */
-            background-color: #00bfae; /* Line color */
-            width: 2px; /* Line width */
-            z-index: 0; /* Ensure lines are behind the images */
-        }
-
-        /* Specific lines for each profile */
-        .line1 {
-            height: 50px; /* Height for upward line */
-            left: 50%;
-            top: 0; /* Start from the top of the profile */
-            transform: translateX(-50%); /* Center the line */
-        }
-
-        .line2 {
-            height: 100px; /* Height of vertical line */
-            left: 50%;
-            top: 100%; /* Start from the bottom of the profile */
-            transform: translateX(-50%); /* Center the line */
-        }
-
-        /* Extend the line to cover all profiles properly */
-        .profile:nth-child(1) .line2 {
-            height: 150px; /* Adjust height for Lionel */
-        }
-
-        .profile:nth-child(2) .line2 {
-            height: 150px; /* Adjust height for Roger */
-        }
-
-        .profile:nth-child(3) .line2 {
-            height: 150px; /* Adjust height for Celine */
-        }
-
-        .profile:nth-child(4) .line2 {
-            height: 150px; /* Adjust height for Mr. Badi */
-        }
-
+        /* Footer Styles */
         footer {
             background-color: rgba(0, 77, 64, 0.9); /* Darker semi-transparent footer background */
             color: white; /* White text */
@@ -182,45 +157,23 @@
         <a href="https://rsoftcreators.github.io/greensorting.github.io/home.html">Home</a>
         <a href="https://rsoftcreators.github.io/greensorting.github.io/about.html">About Us</a>
         <a href="https://rsoftcreators.github.io/greensorting.github.io/development.html">Development</a>
-        <a href="https://rsoftcreators.github.io/greensorting.github.io/team.html" class="active">Our Team</a>
-        <a href="https://rsoftcreators.github.io/greensorting.github.io/finalthoughts.html">Final Thoughts</a>
+        <a href="https://rsoftcreators.github.io/greensorting.github.io/team.html">Our Team</a>
+        <a href="https://rsoftcreators.github.io/greensorting.github.io/finalthoughts.html" class="active">Final Thoughts</a>
     </nav>
 </header>
 
+<div class="banner"></div>
+
+<div class="video-container">
+    <iframe src="https://drive.google.com/file/d/1MetPyF3prwtSBNXJLyTTu1Qk1SR-vpUj/preview" width="640" height="480" allow="autoplay"></iframe>
+</div>
+
 <div class="content">
-    <h2>Meet Our Team</h2>
+    <h2>Reflection</h2>
+    <p>After getting some very thoughtful feedback from our mentor and others, we realized that we still have things to do to perfect our project. We are looking forward to doing it as fast as we can. So far, we are satisfied with what we have done, but we are not done yet; we can do more than we did now.</p>
 
-    <div class="profile">
-        <img src="https://rsoftcreators.github.io/greensorting.github.io/images/Lionel.png" alt="Lionel">
-        <div class="line line1"></div>
-        <div class="line line2"></div>
-        <h3>Lionel</h3>
-        <p>Lionel plays a crucial role in the design and programming of the Pictoblox project. He is responsible for the application's design and content, including the functionality of the machine learning program that scans recyclable materials.</p>
-    </div>
-
-    <div class="profile">
-        <img src="https://rsoftcreators.github.io/greensorting.github.io/images/Roger.png" alt="Roger">
-        <div class="line line1"></div>
-        <div class="line line2"></div>
-        <h3>Roger</h3>
-        <p>Roger is notable for his contributions to creating and refining the hardware of the project skillfully. He has been instrumental in shaping the final mockup, designing the slide presentation, and is also responsible for designing and programming the project's website.</p>
-    </div>
-
-    <div class="profile">
-        <img src="https://rsoftcreators.github.io/greensorting.github.io/images/Celine.png" alt="Celine">
-        <div class="line line1"></div>
-        <div class="line line2"></div>
-        <h3>Celine</h3>
-        <p>As the only female member of the team, Celine excels in keeping the team organized. She ensures that project submissions are timely and prepares presentation content, actively participating in team efforts to maintain productivity.</p>
-    </div>
-
-    <div class="profile">
-        <img src="https://rsoftcreators.github.io/greensorting.github.io/images/MrBadi.png" alt="Mr. Badi">
-        <div class="line line1"></div>
-        <div class="line line2"></div>
-        <h3>Mr. Badi (Mentor)</h3>
-        <p>Mr. Badi provides essential guidance and support to the team, ensuring they have the necessary equipment and strategies to sustain the project. His assistance has been invaluable, particularly when transitioning to using Arduino for hardware functionality.</p>
-    </div>
+    <h2>Future Goals</h2>
+    <p>To create and launch Indonesia's first-ever material exchange platform. When it starts to improve and is suitable for different kinds of places, we will keep expanding it across the nation and even around the globe.</p>
 </div>
 
 <footer>

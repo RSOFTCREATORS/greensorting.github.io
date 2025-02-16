@@ -35,10 +35,6 @@
             font-size: 2.5em; /* Increase font size */
         }
 
-        nav {
-            margin-top: 10px; /* Space between title and buttons */
-        }
-
         /* Navigation Buttons */
         nav a {
             display: inline-block;
@@ -56,10 +52,21 @@
             transform: scale(1.05); /* Slight zoom effect */
         }
 
-        /* Remove active class for header links */
         nav .active {
-            background-color: transparent; /* Reset background color */
-            text-decoration: none; /* Remove underline */
+            background-color: #00695c; /* Active button color */
+            position: relative; /* Position for bubble effect */
+        }
+
+        nav .active::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -5px; /* Position bubble below button */
+            transform: translateX(-50%);
+            width: 60%; /* Bubble width */
+            height: 4px; /* Bubble height */
+            background-color: #00bfae; /* Bubble color */
+            border-radius: 2px; /* Rounded corners for bubble */
         }
 
         /* Content Styles */
@@ -173,9 +180,9 @@
     <h1>GreenSorting</h1>
     <nav>
         <a href="https://rsoftcreators.github.io/greensorting.github.io/home.html" class="">Home</a>
-        <a href="https://rsoftcreators.github.io/greensorting.github.io/about.html"class="">About Us</a>
-        <a href="https://rsoftcreators.github.io/greensorting.github.io/members.html"class="active">Members</a>
-        <a href="https://rsoftcreators.github.io/greensorting.github.io/getstarted.html"class="">Get Started</a>
+        <a href="https://rsoftcreators.github.io/greensorting.github.io/about.html" class="">About Us</a>
+        <a href="https://rsoftcreators.github.io/greensorting.github.io/members.html" class="active">Members</a>
+        <a href="https://rsoftcreators.github.io/greensorting.github.io/getstarted.html" class="">Get Started</a>
     </nav>
 </header>
 
