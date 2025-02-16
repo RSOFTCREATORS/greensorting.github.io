@@ -84,9 +84,9 @@
 
         /* Banner Styles */
         .banner, .canva-embed, .video-container {
-            width: 80%; /* Set width to 80% of the content area */
+            width: 70%; /* Set width to 70% of the content area */
             height: 0; /* Set height to zero for padding-bottom */
-            padding-bottom: 45%; /* 16:9 Aspect Ratio */
+            padding-bottom: 40%; /* Adjusted aspect ratio for smaller size */
             margin: 10px auto; /* Center the element and reduce vertical margin */
             border-radius: 10px; /* Rounded corners */
             position: relative; /* Position for absolute elements */
@@ -198,6 +198,28 @@
             p {
                 font-size: 1em; /* Smaller paragraph font size */
             }
+
+            /* Hamburger Menu Styles */
+            .hamburger {
+                display: block;
+                cursor: pointer;
+                margin: 10px auto; /* Center the hamburger icon */
+            }
+
+            nav {
+                display: none; /* Hide the original nav on mobile */
+                flex-direction: column; /* Stack items vertically */
+                align-items: center; /* Center items */
+            }
+
+            nav.active {
+                display: flex; /* Show nav when active */
+            }
+
+            nav a {
+                margin: 5px 0; /* Space between buttons */
+                width: 80%; /* Width for buttons */
+            }
         }
     </style>
 </head>
@@ -205,7 +227,8 @@
 
 <header class="main-header">
     <h1>GreenSorting</h1>
-    <nav>
+    <div class="hamburger" onclick="toggleNav()">&#9776;</div> <!-- Hamburger Icon -->
+    <nav id="navbar">
         <a href="https://rsoftcreators.github.io/greensorting.github.io/home.html">Home</a>
         <a href="https://rsoftcreators.github.io/greensorting.github.io/about.html">About Us</a>
         <a href="https://rsoftcreators.github.io/greensorting.github.io/development.html">Development</a>
@@ -241,6 +264,13 @@
 <footer>
     <p>© 2025 GreenSorting. All rights reserved.</p>
 </footer>
+
+<script>
+    function toggleNav() {
+        const navbar = document.getElementById('navbar');
+        navbar.classList.toggle('active');
+    }
+</script>
 
 </body>
 </html>
