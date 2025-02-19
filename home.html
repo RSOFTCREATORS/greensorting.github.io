@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenSorting</title>
+    <link rel="icon" href="images/icon.png" type="image/png"> <!-- Favicon link -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background: linear-gradient(to right, #e0f7fa, #a8e6cf); 
+            color: #004d40;
+            scroll-behavior: smooth; 
+        }
+
+        /* Header Styles */
+        .main-header {
+            background-color: rgba(0, 77, 64, 0.8); /* Semi-transparent header */
+            padding: 20px; /* Padding for the header */
+            text-align: center;
+            width: 100%; /* Ensure it fills the width */
+            position: fixed; /* Fix position to stay at the top */
+            top: 0; /* Stick to the top */
+            left: 0; /* Align to the left */
+            z-index: 10; /* Ensure it stays above other content */
+            transition: background-color 0.3s; /* Smooth transition for background */
+        }
+
+        .main-header h1 {
+            color: white; /* White text for header */
+            margin: 0; /* Remove margin */
+            font-size: 2.5em; /* Increase font size */
+        }
+
+        nav {
+            margin-top: 10px; /* Space between title and buttons */
+        }
+
+        /* Navigation Buttons */
+        nav a {
+            display: inline-block;
+            background-color: #004d40; /* Button background color */
+            color: white; /* Button text color */
+            padding: 10px 20px; /* Padding for buttons */
+            margin: 0 10px; /* Space between buttons */
+            border-radius: 5px; /* Rounded corners */
+            text-decoration: none; /* Remove underline */
+            transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+        }
+
+        nav a:hover {
+            background-color: #00695c; /* Darker shade on hover */
+            transform: scale(1.05); /* Slight zoom effect */
+        }
+
+        nav .active {
+            background-color: #00695c; /* Active button color */
+            position: relative; /* Position for bubble effect */
+        }
+
+        nav .active::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -5px; /* Position bubble below button */
+            transform: translateX(-50%);
+            width: 60%; /* Bubble width */
+            height: 4px; /* Bubble height */
+            background-color: #00bfae; /* Bubble color */
+            border-radius: 2px; /* Rounded corners for bubble */
+        }
+
+        /* Slideshow Styles */
+        .slideshow {
+            position: relative;
+            width: 80%; /* Set desired width */
+            max-width: 960px; /* Max width for larger screens */
+            margin: 200px auto 40px; /* Increased top margin to push down */
+            overflow: hidden;
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow effect */
+            aspect-ratio: 16 / 9; /* Maintain landscape 16:9 aspect ratio */
+            height: auto; /* Height auto to maintain aspect ratio */
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%; /* Fill the slideshow area */
+            object-fit: cover; /* Maintain aspect ratio of images */
+            display: none; /* Hide all slides initially */
+            opacity: 0; /* Start with transparent */
+            transition: opacity 1s ease; /* Smooth transition */
+        }
+
+        .slide.active {
+            display: block; /* Show active slide */
+            opacity: 1; /* Fully visible */
+        }
+
+        /* Navigation Arrows */
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #004d40; /* Solid background color */
+            border: none; /* Remove border */
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px; /* Increase arrow size */
+            transition: background-color 0.3s; /* Smooth background transition */
+        }
+
+        .arrow.left {
+            left: 10px; /* Position left arrow */
+        }
+
+        .arrow.right {
+            right: 10px; /* Position right arrow */
+        }
+
+        .arrow:hover {
+            background-color: #00695c; /* Darker shade on hover */
+        }
+
+        .arrow::before {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+        }
+
+        .arrow.left::before {
+            border-right: 10px solid white; /* White arrow to the left */
+        }
+
+        .arrow.right::before {
+            border-left: 10px solid white; /* White arrow to the right */
+        }
+
+        /* Content Styles */
+        .content {
+            padding: 50px 20px; /* Adjust for spacing */
+            text-align: left; /* Align text to the left */
+            width: 100%; /* Ensure full width */
+            margin-top: 40px; /* Add margin to push content lower */
+        }
+
+        /* Section with Image and Text */
+        .section {
+            display: flex;
+            align-items: center; /* Center vertically */
+            margin: 0 20px; /* Add side margins for spacing */
+            margin-bottom: 40px; /* Space between sections */
+            transition: transform 0.3s; /* Smooth transition for hover */
+        }
+
+        .section:hover {
+            transform: translateY(-5px); /* Lift effect on hover */
+        }
+
+        .section img {
+            width: 200px; /* Set width for square image */
+            height: 200px; /* Set height for square image */
+            object-fit: cover; /* Cover to maintain aspect ratio */
+            border-radius: 10px; /* Rounded corners for the image */
+            margin-left: 20px; /* Space between text and image */
+            margin-bottom: 20px; /* Space below the image */
+            transition: transform 0.3s; /* Smooth transition */
+        }
+
+        .section img:hover {
+            transform: scale(1.05); /* Slight zoom effect on hover */
+        }
+
+        /* Adjust text container */
+        .about-text, .problems-text {
+            flex: 1; /* Allow text to take remaining space */
+            margin-right: 20px; /* Space between text and image */
+        }
+
+        /* Font size adjustments */
+        h2 {
+            font-size: 1.8em; /* Increase subtitle font size */
+            margin: 0 0 10px; /* Space below the subtitle */
+            position: relative; /* Position for decorations */
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px; /* Position line below heading */
+            width: 50px; /* Line width */
+            height: 2px; /* Line height */
+            background-color: #00bfae; /* Line color */
+        }
+
+        p {
+            font-size: 1.1em; /* Increase paragraph font size */
+            line-height: 1.6; /* Improve line spacing */
+            margin: 0; /* Remove default margin */
+        }
+
+        /* Gallery Section Styles */
+        .gallery-section {
+            text-align: center; /* Center the text */
+            margin: 40px 0; /* Margin above and below the section */
+        }
+
+        .gallery-title {
+            font-size: 2em; /* Title font size */
+            position: relative; /* For shape decorations */
+            display: inline-block; /* Allow shapes to align properly */
+            padding: 10px 20px; /* Padding for title */
+            background: #a8e6cf; /* Background for the title */
+            border-radius: 15px; /* Rounded corners */
+        }
+
+        .gallery-title::before,
+        .gallery-title::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 30px; /* Shape width */
+            height: 30px; /* Shape height */
+            background: #004d40; /* Shape color */
+            border-radius: 50%; /* Circular shapes */
+        }
+
+        .gallery-title::before {
+            left: -40px; /* Position left shape */
+        }
+
+        .gallery-title::after {
+            right: -40px; /* Position right shape */
+        }
+
+        /* Get Started Section Styles */
+        .get-started {
+            text-align: center; /* Center the text */
+            padding: 60px 20px; /* Add padding for spacing */
+            margin: 50px 0; /* Margin above and below */
+            background-color: rgba(0, 77, 64, 0.1); /* Light background */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow effect */
+        }
+
+        .get-started h3 { /* Changed h2 to h3 to avoid underline */
+            margin: 0 0 10px; /* Space below the title */
+            font-size: 1.8em; /* Title font size */
+        }
+
+        .get-started .button {
+            display: inline-block;
+            background-color: #004d40; /* Button background color */
+            color: white; /* Button text color */
+            padding: 15px 30px; /* Padding for button */
+            border-radius: 5px; /* Rounded corners */
+            text-decoration: none; /* Remove underline */
+            transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+            margin-top: 20px; /* Space above button */
+        }
+
+        .get-started .button:hover {
+            background-color: #00695c; /* Darker shade on hover */
+            transform: scale(1.05); /* Slight zoom effect */
+        }
+
+        /* Ensure the first section background fills the width */
+        .curve-bg {
+            background: linear-gradient(to right, #ffffff, #a8e6cf); /* White to light green gradient */
+            padding: 20px 0; /* Padding for the first section */
+            width: 100%; /* Ensure it fills the width */
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: rgba(0, 77, 64, 0.9); /* Darker semi-transparent footer background */
+            color: white; /* White text */
+            text-align: center; /* Center the text */
+            padding: 20px 0; /* Padding for the footer */
+            position: relative; /* Position relative to other elements */
+            bottom: 0; /* Stick to the bottom */
+            width: 100%; /* Ensure it fills the width */
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+        
+        footer:hover {
+            background-color: rgba(0, 77, 64, 1); /* Darker shade on hover */
+        }
+    </style>
+</head>
+<body>
+
+<header class="main-header">
+    <h1>GreenSorting</h1>
+    <nav>
+        <a href="https://rsoftcreators.github.io/greensorting.github.io/home.html" class="active">Home</a>
+        <a href="https://rsoftcreators.github.io/greensorting.github.io/about.html">About Us</a>
+        <a href="https://rsoftcreators.github.io/greensorting.github.io/development.html">Development</a>
+        <a href="https://rsoftcreators.github.io/greensorting.github.io/team.html">Our Team</a>
+        <a href="https://rsoftcreators.github.io/greensorting.github.io/finalthoughts.html">Final Thoughts</a>
+    </nav>
+</header>
+
+<div class="slideshow" id="slideshow">
+    <img src="https://rsoftcreators.github.io/greensorting.github.io/images/landscape1.png" alt="Slideshow Image 1" class="slide active">
+    <img src="https://rsoftcreators.github.io/greensorting.github.io/images/slide5.png" alt="Slideshow Image 2" class="slide">
+    <img src="https://rsoftcreators.github.io/greensorting.github.io/images/team.png" alt="Slideshow Image 3" class="slide">
+    <img src="https://rsoftcreators.github.io/greensorting.github.io/images/slide6.png" alt="Slideshow Image 4" class="slide">
+    <img src="https://rsoftcreators.github.io/greensorting.github.io/images/regional.png" alt="Slideshow Image 5" class="slide">
+    <img src="https://rsoftcreators.github.io/greensorting.github.io/images/team.png" alt="Slideshow Image 6" class="slide">
+    <button class="arrow left" onclick="changeSlide(-1)"></button>
+    <button class="arrow right" onclick="changeSlide(1)"></button>
+</div>
+
+<!-- Gallery Section -->
+<div class="gallery-section">
+    <div class="gallery-title">Our Organization Gallery</div>
+</div>
+
+<div class="content" id="about">
+    <div class="section" data-aos="fade-up">
+        <div class="about-text">
+            <h2>Why We Started GreenSorting</h2>
+            <p>At GreenSorting, we recognized a pressing need in our communities. Many people express frustration about recyclable materials ending up in landfills, this is because the fact that a lot of our recyleable materials aren't recycled correctly. We started GreenSorting to empower individuals to recycle effectively while earning rewards, using the power of collaboration and reaching more people in order to together collect trashes, we can eventually significantly reduce our landfill waste.</p>
+        </div>
+        <img src="https://rsoftcreators.github.io/greensorting.github.io/images/trash.png" alt="GreenSorting Image" style="margin-right: 20px;">
+    </div>
+</div>
+
+<div class="curve-bg">
+    <div class="content" id="problems">
+        <div class="section" data-aos="fade-up">
+            <img src="https://rsoftcreators.github.io/greensorting.github.io/images/problem.png" alt="Problems Image" style="margin-right: 20px;">
+            <div class="problems-text">
+                <h2>Our Problems to Solve</h2>
+                <p>Every year, millions of tons of recyclable materials are discarded, contributing to pollution and resources wasted. Our goal at GreenSorting is to tackle this issue immediately. We aim to provide an easy platform for individuals to recycle their materials responsibly while educating community engagement, awareness about the importance of recycling, and its importance to our future.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="get-started" id="getstarted">
+    <h3>Get Started</h3>
+    <p>Join us in making a difference! Contact us today to learn more about our services or to provide feedback and suggestions to improve our services!</p>
+    <a href="mailto:greensorting@gmail.com?subject=Feedbacks/Suggestions" class="button">Contact Us</a>
+</div>
+
+<footer>
+    <p>© 2025 GreenSorting. All rights reserved.</p>
+</footer>
+
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    const showSlide = (index) => {
+        slides.forEach((slide, idx) => {
+            slide.classList.remove('active');
+            if (idx === index) {
+                slide.classList.add('active');
+            }
+        });
+    };
+
+    const changeSlide = (direction) => {
+        currentSlide = (currentSlide + direction + slides.length) % slides.length;
+        showSlide(currentSlide);
+    };
+
+    const autoplaySlides = () => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    };
+
+    setInterval(autoplaySlides, 4000); 
+    showSlide(currentSlide);
+
+    AOS.init();
+</script>
+
+</body>
+</html>

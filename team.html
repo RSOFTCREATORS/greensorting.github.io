@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team - GreenSorting</title>
+    <link rel="icon" href="images/icon.png" type="image/png"> <!-- Favicon link -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #e0f7fa, #a8e6cf); /* Soft gradient */
+            color: #004d40;
+            scroll-behavior: smooth; /* Smooth scrolling */
+        }
+
+        /* Header Styles */
+        /* Header Styles */
+        .main-header {
+            background-color: rgba(0, 77, 64, 0.8); /* Semi-transparent header */
+            padding: 20px; /* Padding for the header */
+            text-align: center;
+            width: 100%; /* Ensure it fills the width */
+            position: fixed; /* Fix position to stay at the top */
+            top: 0; /* Stick to the top */
+            left: 0; /* Align to the left */
+            z-index: 10; /* Ensure it stays above other content */
+            transition: background-color 0.3s; /* Smooth transition for background */
+        }
+
+        .main-header h1 {
+            color: white; /* White text for header */
+            margin: 0; /* Remove margin */
+            font-size: 2.5em; /* Increase font size */
+        }
+
+        nav {
+            margin-top: 10px; /* Space between title and buttons */
+        }
+
+        /* Navigation Buttons */
+        nav a {
+            display: inline-block;
+            background-color: #004d40; /* Button background color */
+            color: white; /* Button text color */
+            padding: 10px 20px; /* Padding for buttons */
+            margin: 0 10px; /* Space between buttons */
+            border-radius: 5px; /* Rounded corners */
+            text-decoration: none; /* Remove underline */
+            transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+        }
+
+        nav a:hover {
+            background-color: #00695c; /* Darker shade on hover */
+            transform: scale(1.05); /* Slight zoom effect */
+        }
+
+        nav .active {
+            background-color: #00695c; /* Active button color */
+            position: relative; /* Position for bubble effect */
+        }
+
+        nav .active::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -5px; /* Position bubble below button */
+            transform: translateX(-50%);
+            width: 60%; /* Bubble width */
+            height: 4px; /* Bubble height */
+            background-color: #00bfae; /* Bubble color */
+            border-radius: 2px; /* Rounded corners for bubble */
+        }
+
+        /* Content Styles */
+        .content {
+            padding: 150px 20px; /* Increased top padding for header space */
+            max-width: 800px; /* Max width for content */
+            margin: auto; /* Center content */
+            text-align: left; /* Align text to the left */
+        }
+
+        h2 {
+            font-size: 2em; /* Increase subtitle font size */
+            margin: 20px 0; /* Space around the subtitle */
+            position: relative; /* Position for decorations */
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px; /* Position line below heading */
+            width: 50px; /* Line width */
+            height: 2px; /* Line height */
+            background-color: #00bfae; /* Line color */
+        }
+
+        .profile {
+            position: relative; /* For absolute positioning of lines */
+            margin: 80px 0; /* Increased space between profiles */
+            padding: 20px;
+            border-radius: 10px; /* Rounded corners */
+            background-color: white; /* Background for profile */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+        }
+
+        .profile img {
+            width: 120px; /* Profile image width */
+            height: 120px; /* Profile image height */
+            border-radius: 50%; /* Circular image */
+            position: absolute; /* Position for curved lines */
+            top: -60px; /* Adjust to place image above the profile box */
+            left: 50%; /* Center image */
+            transform: translateX(-50%); /* Adjust centering */
+            z-index: 1; /* Ensure image is above the lines */
+        }
+
+        .line {
+            position: absolute; /* Position for the connecting line */
+            background-color: #00bfae; /* Line color */
+            width: 2px; /* Line width */
+            z-index: 0; /* Ensure lines are behind the images */
+        }
+
+        /* Specific lines for each profile */
+        .line1 {
+            height: 50px; /* Height for upward line */
+            left: 50%;
+            top: 0; /* Start from the top of the profile */
+            transform: translateX(-50%); /* Center the line */
+        }
+
+        .line2 {
+            height: 100px; /* Height of vertical line */
+            left: 50%;
+            top: 100%; /* Start from the bottom of the profile */
+            transform: translateX(-50%); /* Center the line */
+        }
+
+        /* Extend the line to cover all profiles properly */
+        .profile:nth-child(1) .line2 {
+            height: 150px; /* Adjust height for Lionel */
+        }
+
+        .profile:nth-child(2) .line2 {
+            height: 150px; /* Adjust height for Roger */
+        }
+
+        .profile:nth-child(3) .line2 {
+            height: 150px; /* Adjust height for Celine */
+        }
+
+        .profile:nth-child(4) .line2 {
+            height: 150px; /* Adjust height for Mr. Badi */
+        }
+
+        footer {
+            background-color: rgba(0, 77, 64, 0.9); /* Darker semi-transparent footer background */
+            color: white; /* White text */
+            text-align: center; /* Center the text */
+            padding: 20px 0; /* Padding for the footer */
+            position: relative; /* Position relative to other elements */
+            bottom: 0; /* Stick to the bottom */
+            width: 100%; /* Ensure it fills the width */
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+
+        footer:hover {
+            background-color: rgba(0, 77, 64, 1); /* Darker shade on hover */
+        }
+    </style>
+</head>
+<body>
+
+<header class="main-header">
+    <h1>GreenSorting</h1>
+    <nav>
+        <a href="http://https//rsoftcreators.github.io/greensorting.github.io/home.html">Home</a>
+        <a href="http://https//rsoftcreators.github.io/greensorting.github.io/about.html">About Us</a>
+        <a href="http://https//rsoftcreators.github.io/greensorting.github.io/development.html">Development</a>
+        <a href="http://https//rsoftcreators.github.io/greensorting.github.io/team.html" class="active">Our Team</a>
+        <a href="http://https//rsoftcreators.github.io/greensorting.github.io/finalthoughts.html">Final Thoughts</a>
+    </nav>
+</header>
+
+<div class="content">
+    <h2>Meet Our Team</h2>
+
+    <div class="profile">
+        <img src="https://rsoftcreators.github.io/greensorting.github.io/images/Lionel.png" alt="Lionel">
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <h3>Lionel</h3>
+        <p>Lionel plays a crucial role in the design and programming of the Pictoblox project. He is responsible for the application's design and content, including the functionality of the machine learning program that scans recyclable materials.</p>
+    </div>
+
+    <div class="profile">
+        <img src="https://rsoftcreators.github.io/greensorting.github.io/images/Roger.png" alt="Roger">
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <h3>Roger</h3>
+        <p>Roger is notable for his contributions to creating and refining the hardware of the project skillfully. He has been instrumental in shaping the final mockup, designing the slide presentation, and is also responsible for designing and programming the project's website.</p>
+    </div>
+
+    <div class="profile">
+        <img src="https://rsoftcreators.github.io/greensorting.github.io/images/Celine.png" alt="Celine">
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <h3>Celine</h3>
+        <p>As the only female member of the team, Celine excels in keeping the team organized. She ensures that project submissions are timely and prepares presentation content, actively participating in team efforts to maintain productivity.</p>
+    </div>
+
+    <div class="profile">
+        <img src="https://rsoftcreators.github.io/greensorting.github.io/images/MrBadi.png" alt="Mr. Badi">
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <h3>Mr. Badi (Mentor)</h3>
+        <p>Mr. Badi provides essential guidance and support to the team, ensuring they have the necessary equipment and strategies to sustain the project. His assistance has been invaluable, particularly when transitioning to using Arduino for hardware functionality.</p>
+    </div>
+</div>
+
+<footer>
+    <p>© 2025 GreenSorting. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

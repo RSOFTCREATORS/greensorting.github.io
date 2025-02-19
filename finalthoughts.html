@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Thoughts - GreenSorting</title>
+    <link rel="icon" href="images/icon.png" type="image/png"> <!-- Favicon link -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #e0f7fa, #a8e6cf); /* Soft gradient */
+            color: #004d40;
+            scroll-behavior: smooth; /* Smooth scrolling */
+        }
+
+        /* Header Styles */
+        .main-header {
+            background-color: rgba(0, 77, 64, 0.8); /* Semi-transparent header */
+            padding: 20px; /* Padding for the header */
+            text-align: center;
+            width: 100%; /* Ensure it fills the width */
+            position: fixed; /* Fix position to stay at the top */
+            top: 0; /* Stick to the top */
+            left: 0; /* Align to the left */
+            z-index: 10; /* Ensure it stays above other content */
+            transition: background-color 0.3s; /* Smooth transition for background */
+        }
+
+        .main-header h1 {
+            color: white; /* White text for header */
+            margin: 0; /* Remove margin */
+            font-size: 2.5em; /* Increase font size */
+        }
+
+        nav {
+            margin-top: 10px; /* Space between title and buttons */
+        }
+
+        /* Navigation Buttons */
+        nav a {
+            display: inline-block;
+            background-color: #004d40; /* Button background color */
+            color: white; /* Button text color */
+            padding: 10px 20px; /* Padding for buttons */
+            margin: 0 10px; /* Space between buttons */
+            border-radius: 5px; /* Rounded corners */
+            text-decoration: none; /* Remove underline */
+            transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+        }
+
+        nav a:hover {
+            background-color: #00695c; /* Darker shade on hover */
+            transform: scale(1.05); /* Slight zoom effect */
+        }
+
+        nav .active {
+            background-color: #00695c; /* Active button color */
+            position: relative; /* Position for bubble effect */
+        }
+
+        nav .active::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -5px; /* Position bubble below button */
+            transform: translateX(-50%);
+            width: 60%; /* Bubble width */
+            height: 4px; /* Bubble height */
+            background-color: #00bfae; /* Bubble color */
+            border-radius: 2px; /* Rounded corners for bubble */
+        }
+
+        /* Title Styles */
+        .section-title {
+            text-align: center; /* Center titles */
+            font-size: 1.5em; /* Title font size */
+            margin-top: 180px; /* Increased space from the top of the page */
+            margin-bottom: 5px; /* Reduced space below the title */
+            color: #004d40; /* Title color */
+        }
+
+        /* Banner Styles */
+        .banner, .canva-embed, .video-container {
+            width: 70%; /* Set width to 70% of the content area */
+            height: 0; /* Set height to zero for padding-bottom */
+            padding-bottom: 40%; /* Maintain aspect ratio */
+            margin: 10px auto; /* Center the element and reduce vertical margin */
+            border-radius: 10px; /* Rounded corners */
+            position: relative; /* Position for absolute elements */
+        }
+
+        .banner {
+            background-image: url('https://rsoftcreators.github.io/greensorting.github.io/images/banner.png');
+            background-size: cover; /* Cover to maintain aspect ratio */
+            background-position: center; /* Center the image */
+        }
+
+        /* Canva Embed Styles */
+        .canva-embed {
+            box-shadow: 0 2px 8px rgba(63, 69, 81, 0.16); /* Shadow effect */
+            background-color: #f0f0f0; /* Light gray background for Canva holder */
+        }
+
+        .canva-embed iframe {
+            position: absolute; /* Position absolute to fill the container */
+            top: 0; /* Align to the top */
+            left: 0; /* Align to the left */
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            border: none; /* Remove border */
+            border-radius: 10px; /* Rounded corners */
+        }
+
+        /* Video Styles */
+        .video-container iframe {
+            position: absolute; /* Position absolute to fill the container */
+            top: 0; /* Align to the top */
+            left: 0; /* Align to the left */
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            border: none; /* Remove border */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow effect */
+        }
+
+        /* Content Styles */
+        .content {
+            padding: 20px; /* Padding for content */
+            max-width: 800px; /* Max width for content */
+            margin: auto; /* Center content */
+            text-align: left; /* Align text to the left */
+            margin-top: 5px; /* Reduced space above the content */
+        }
+
+        h2 {
+            font-size: 2em; /* Increase subtitle font size */
+            margin: 15px 0; /* Reduced space around the subtitle */
+            position: relative; /* Position for decorations */
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px; /* Position line below heading */
+            width: 50px; /* Line width */
+            height: 2px; /* Line height */
+            background-color: #00bfae; /* Line color */
+        }
+
+        p {
+            font-size: 1.1em; /* Increase paragraph font size */
+            line-height: 1.6; /* Improve line spacing */
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: rgba(0, 77, 64, 0.9); /* Darker semi-transparent footer background */
+            color: white; /* White text */
+            text-align: center; /* Center the text */
+            padding: 20px 0; /* Padding for the footer */
+            position: relative; /* Position relative to other elements */
+            bottom: 0; /* Stick to the bottom */
+            width: 100%; /* Ensure it fills the width */
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+            transition: background-color 0.3s; /* Smooth transition */
+            margin-top: 40px; /* Space above the footer */
+        }
+
+        footer:hover {
+            background-color: rgba(0, 77, 64, 1); /* Darker shade on hover */
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .section-title {
+                margin-top: 120px; /* Adjusted margin for mobile */
+                font-size: 1.2em; /* Smaller title font size */
+            }
+
+            .banner, .canva-embed, .video-container {
+                width: 85%; /* Set width to 85% of the content area for smaller elements */
+                padding-bottom: 56.25%; /* Maintain aspect ratio */
+                margin: 5px auto; /* Center the element and reduce vertical margin */
+            }
+
+            .content {
+                padding: 10px; /* Reduced padding for mobile */
+            }
+
+            h2 {
+                font-size: 1.5em; /* Smaller subtitle font size */
+            }
+
+            p {
+                font-size: 1em; /* Smaller paragraph font size */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="main-header">
+    <h1>GreenSorting</h1>
+    <nav>
+        <a href="https://rsoftcreators.github.io/greensorting.github.io/home.html">Home</a>
+        <a href="https://rsoftcreators.github.io/greensorting.github.io/about.html">About Us</a>
+        <a href="https://rsoftcreators.github.io/greensorting.github.io/development.html">Development</a>
+        <a href="https://rsoftcreators.github.io/greensorting.github.io/team.html">Our Team</a>
+        <a href="https://rsoftcreators.github.io/greensorting.github.io/finalthoughts.html" class="active">Final Thoughts</a>
+    </nav>
+</header>
+
+<div class="section-title">Project Documentation</div>
+<div class="banner"></div>
+
+<div class="canva-embed">
+    <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%; padding-bottom: 0; overflow: hidden; border-radius: 8px;">
+        <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0;"
+            src="https://www.canva.com/design/DAGefOE7CS0/KkuB1qpjPWdm_ktLMlh2RA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+        </iframe>
+    </div>
+</div>
+
+<div class="section-title">Video Presentation</div>
+<div class="video-container">
+    <iframe src="https://drive.google.com/file/d/1MetPyF3prwtSBNXJLyTTu1Qk1SR-vpUj/preview" allow="autoplay"></iframe>
+</div>
+
+<div class="content">
+    <h2>Reflection</h2>
+    <p>After getting some very thoughtful feedback from our mentor and others, we realized that we still have things to do to perfect our project. We are looking forward to doing it as fast as we can. So far, we are satisfied with what we have done, but we are not done yet; we can do more than we did now.</p>
+
+    <h2>Future Goals</h2>
+    <p>To create and launch Indonesia's first-ever material exchange platform. When it starts to improve and is suitable for different kinds of places, we will keep expanding it across the nation and even around the globe.</p>
+</div>
+
+<footer>
+    <p>© 2025 GreenSorting. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
