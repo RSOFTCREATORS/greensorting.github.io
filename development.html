@@ -73,7 +73,6 @@
             border-radius: 2px; /* Rounded corners for bubble */
         }
 
-
         /* Content Styles */
         .content {
             padding: 150px 20px; /* Increased top padding for header space */
@@ -101,6 +100,27 @@
         p {
             font-size: 1.1em; /* Increase paragraph font size */
             line-height: 1.6; /* Improve line spacing */
+        }
+
+        .image-holder {
+            width: 100%; /* Full width */
+            height: 300px; /* Fixed height */
+            background-size: cover; /* Cover to maintain aspect ratio */
+            background-position: center; /* Center the image */
+            margin: 20px 0; /* Space around the image */
+            border-radius: 10px; /* Rounded corners */
+        }
+
+        .image-holder.initiation {
+            background-image: url('https://rsoftcreators.github.io/greensorting.github.io/images/develop1.png');
+        }
+
+        .image-holder.planning {
+            background-image: url('https://rsoftcreators.github.io/greensorting.github.io/images/develop2.png');
+        }
+
+        .image-holder.execution {
+            background-image: url('https://rsoftcreators.github.io/greensorting.github.io/images/develop3.png');
         }
 
         footer {
@@ -137,12 +157,15 @@
     <h2>Development Process</h2>
 
     <h3>Project Initiation</h3>
+    <div class="image-holder initiation"></div>
     <p>The GreenSorting project serves as an online platform for users to trade recyclable items while earning money, thereby promoting the principles of reusing and reducing waste. The project originated from the recognition of valuable materials that are often not processed effectively for recycling, despite their potential. Based in Indonesia, the initiative aims to be the first of its kind in the country, with aspirations to expand across all 38 provinces, reaching approximately 250 million people. The goal is to unite communities in a collective effort to preserve the planet, underscoring that this is not an individual endeavor but one that necessitates collaboration.</p>
 
     <h3>Project Planning</h3>
+    <div class="image-holder planning"></div>
     <p>The chosen theme of Climate Action and Responsible Consumption facilitated brainstorming sessions that led to the creation of compact machine stations. These stations allow individuals to deposit collected recyclables and receive financial compensation. The collected materials are then processed for recycling at the headquarters.</p>
 
     <h3>Project Execution</h3>
+    <div class="image-holder execution"></div>
     <p>This initiative stems from a recognized problem and a strong determination to address it. Initially, the founders selected the theme to work on and conducted an analysis of existing solutions and local conditions in Indonesia. Subsequently, development commenced on both the software and hardware aspects, ensuring that the project is well-equipped for a successful launch.</p>
 </div>
 
