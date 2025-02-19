@@ -13,10 +13,10 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            overflow-x: hidden; /* Prevent horizontal scrolling */
-            background: linear-gradient(to right, #e0f7fa, #a8e6cf); /* Soft gradient */
+            overflow-x: hidden;
+            background: linear-gradient(to right, #e0f7fa, #a8e6cf); 
             color: #004d40;
-            scroll-behavior: smooth; /* Smooth scrolling */
+            scroll-behavior: smooth; 
         }
 
         /* Header Styles */
@@ -322,10 +322,10 @@
 <div class="slideshow" id="slideshow">
     <img src="https://rsoftcreators.github.io/greensorting.github.io/images/landscape1.png" alt="Slideshow Image 1" class="slide active">
     <img src="https://rsoftcreators.github.io/greensorting.github.io/images/slide5.png" alt="Slideshow Image 2" class="slide">
-    <img src="https://rsoftcreators.github.io/greensorting.github.io/images/landscape7.png" alt="Slideshow Image 3" class="slide">
-    <img src="https://rsoftcreators.github.io/greensorting.github.io/images/landscape8.png" alt="Slideshow Image 4" class="slide">
-    <img src="https://rsoftcreators.github.io/greensorting.github.io/images/landscape1.png" alt="Slideshow Image 5" class="slide">
-    <img src="https://rsoftcreators.github.io/greensorting.github.io/images/landscape7.png" alt="Slideshow Image 6" class="slide">
+    <img src="https://rsoftcreators.github.io/greensorting.github.io/images/team.png" alt="Slideshow Image 3" class="slide">
+    <img src="https://rsoftcreators.github.io/greensorting.github.io/images/slide6.png" alt="Slideshow Image 4" class="slide">
+    <img src="https://rsoftcreators.github.io/greensorting.github.io/images/regional.png" alt="Slideshow Image 5" class="slide">
+    <img src="https://rsoftcreators.github.io/greensorting.github.io/images/team.png" alt="Slideshow Image 6" class="slide">
     <button class="arrow left" onclick="changeSlide(-1)"></button>
     <button class="arrow right" onclick="changeSlide(1)"></button>
 </div>
@@ -339,19 +339,19 @@
     <div class="section" data-aos="fade-up">
         <div class="about-text">
             <h2>Why We Started GreenSorting</h2>
-            <p>At GreenSorting, we recognized a pressing need in our communities. Many people express frustration about recyclable materials ending up in landfills. We started GreenSorting to empower individuals to recycle effectively while earning rewards.</p>
+            <p>At GreenSorting, we recognized a pressing need in our communities. Many people express frustration about recyclable materials ending up in landfills, this is because the fact that a lot of our recyleable materials aren't recycled correctly. We started GreenSorting to empower individuals to recycle effectively while earning rewards, using the power of collaboration and reaching more people in order to together collect trashes, we can eventually significantly reduce our landfill waste.</p>
         </div>
-        <img src="https://rsoftcreators.github.io/greensorting.github.io/images/landscape1.png" alt="GreenSorting Image" style="margin-right: 20px;">
+        <img src="https://rsoftcreators.github.io/greensorting.github.io/images/trash.png" alt="GreenSorting Image" style="margin-right: 20px;">
     </div>
 </div>
 
 <div class="curve-bg">
     <div class="content" id="problems">
         <div class="section" data-aos="fade-up">
-            <img src="https://rsoftcreators.github.io/greensorting.github.io/images/landscape1.png" alt="Problems Image" style="margin-right: 20px;">
+            <img src="https://rsoftcreators.github.io/greensorting.github.io/images/problem.png" alt="Problems Image" style="margin-right: 20px;">
             <div class="problems-text">
                 <h2>Our Problems to Solve</h2>
-                <p>Every year, millions of tons of recyclable materials are discarded, contributing to pollution and resource depletion. Our goal at GreenSorting is to tackle this issue head-on. We aim to provide an easy platform for individuals to recycle their materials responsibly while fostering community engagement and awareness about the importance of recycling.</p>
+                <p>Every year, millions of tons of recyclable materials are discarded, contributing to pollution and resources wasted. Our goal at GreenSorting is to tackle this issue immediately. We aim to provide an easy platform for individuals to recycle their materials responsibly while educating community engagement, awareness about the importance of recycling, and its importance to our future.</p>
             </div>
         </div>
     </div>
@@ -390,10 +390,9 @@
         showSlide(currentSlide);
     };
 
-    setInterval(autoplaySlides, 3000); // Change slide every 3 seconds
-    showSlide(currentSlide); // Show the first slide initially
+    setInterval(autoplaySlides, 1500); 
+    showSlide(currentSlide);
 
-    // Initialize AOS
     AOS.init();
 </script>
 
