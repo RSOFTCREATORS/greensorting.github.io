@@ -156,6 +156,30 @@
             line-height: 1.6; /* Improve line spacing */
         }
 
+        /* Pictoblox Image Styles */
+        .pictoblox-section {
+            display: flex; /* Flexbox for alignment */
+            justify-content: center; /* Center items */
+            align-items: center; /* Center items vertically */
+            margin: 40px 0; /* Space around the section */
+        }
+
+        .image-holder {
+            width: 150px; /* Set the image holder width */
+            height: 150px; /* Set the image holder height */
+            border-radius: 20px; /* Curved corners */
+            overflow: hidden; /* Hide overflow */
+            display: flex; /* Flexbox for centering image */
+            justify-content: center; /* Center image horizontally */
+            align-items: center; /* Center image vertically */
+            margin: 0 10px; /* Space between images and link */
+        }
+
+        .image-holder img {
+            width: 100%; /* Full width */
+            height: auto; /* Maintain aspect ratio */
+        }
+
         /* Footer Styles */
         footer {
             background-color: rgba(0, 77, 64, 0.9); /* Darker semi-transparent footer background */
@@ -172,6 +196,20 @@
 
         footer:hover {
             background-color: rgba(0, 77, 64, 1); /* Darker shade on hover */
+        }
+
+        /* Pictoblox Link Styles */
+        .pictoblox-link {
+            display: block; /* Block display for centering */
+            text-align: center; /* Center the text */
+            font-size: 2.5em; /* Large font size */
+            color: red; /* Red color for the link */
+            margin: 0 20px; /* Space around the link */
+            text-decoration: none; /* Remove underline */
+        }
+
+        .pictoblox-link:hover {
+            text-decoration: underline; /* Underline on hover */
         }
 
         /* Responsive Styles */
@@ -197,6 +235,15 @@
 
             p {
                 font-size: 1em; /* Smaller paragraph font size */
+            }
+
+            .pictoblox-section {
+                flex-direction: column; /* Stack items on smaller screens */
+                align-items: center; /* Center items horizontally */
+            }
+
+            .image-holder {
+                margin-bottom: 20px; /* Space below each image on mobile */
             }
         }
     </style>
@@ -236,6 +283,19 @@
 
     <h2>Future Goals</h2>
     <p>To create and launch Indonesia's first-ever material exchange platform. When it starts to improve and is suitable for different kinds of places, we will keep expanding it across the nation and even around the globe.</p>
+</div>
+
+<!-- Pictoblox Project Section -->
+<div class="pictoblox-section">
+    <div class="image-holder">
+        <img src="https://rsoftcreators.github.io/greensorting.github.io/images/pictoblox.png" alt="Pictoblox">
+    </div>
+    
+    <a href="https://tinyurl.com/GreenSortingPB" class="pictoblox-link">Pictoblox Project Link</a>
+    
+    <div class="image-holder">
+        <img src="https://rsoftcreators.github.io/greensorting.github.io/images/product.jpg" alt="Product">
+    </div>
 </div>
 
 <footer>
